@@ -10,7 +10,8 @@ var devBuildConfig = require('./webpack.config'),
 
 browserSync.init({
   proxy: {
-    target: 'http://example.dev', // change to dev server
+    // target: 'http://example.dev', // change to dev server
+    target: 'http://localhost.com/starter-website/', // change to dev server
     middleware: [
       webpackDevMiddleware(compiler, {
         publicPath: devBuildConfig.output.publicPath,
