@@ -1,0 +1,7 @@
+The Essentials 			= cON2WTVf7lY0oGYsYrGG
+
+Multisite Essentials 	= nNquzb3VZfezKgVYsldv
+
+Extras 					= gLqOoeS4d1NVpRtXTgfW
+
+WooCommerce 			= fs9PUwzw97Ur7pxZ5Vlr

@@ -10,23 +10,23 @@
 }
 .aligncenter {
   display: block;
-  margin: ($line-height-computed / 2) auto;
+  margin: ($spacer / 2) auto;
   height: auto;
 }
 .alignleft,
 .alignright {
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: ($spacer / 2);
   height: auto;
 }
-@media (min-width: $screen-sm-min) {
+@include media-breakpoint-up(sm) {
   // Only float if not on an extra small device
   .alignleft {
     float: left;
-    margin-right: ($line-height-computed / 2);
+    margin-right: ($spacer / 2);
   }
   .alignright {
     float: right;
-    margin-left: ($line-height-computed / 2);
+    margin-left: ($spacer / 2);
   }
 }
 
@@ -35,11 +35,64 @@
   @extend .thumbnail;
 }
 .wp-caption-text {
-  padding: $thumbnail-caption-padding;
+  padding: $thumbnail-padding;
 }
 
 // Text meant only for screen readers
 .screen-reader-text {
   @extend .sr-only;
   @extend .sr-only-focusable;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+   // Extra small devices (portrait phones, less than 34em)
+   // No media query since this is the default in Bootstrap
+
+   // Small devices (landscape phones, 34em and up)
+
+   // @include media-breakpoint-up(xs) { ... }
+   // @include media-breakpoint-up(sm) { ... }
+   // @include media-breakpoint-up(md) { ... }
+   // @include media-breakpoint-up(lg) { ... }
+   // @include media-breakpoint-up(xl) { ... }
+
+   // OR
+
+   // @include media-breakpoint-down(xs) { ... }
+   // @include media-breakpoint-down(sm) { ... }
+   // @include media-breakpoint-down(md) { ... }
+   // @include media-breakpoint-down(lg) { ... }
+   // @include media-breakpoint-down(xl) { ... }
+
+@include media-breakpoint-up(sm) {
+	html,
+	body {
+	}
+}
+
+@include media-breakpoint-up(md) {
+	html,
+	body {}
+}
+
+@include media-breakpoint-up(lg) {
+	html,
+	body {}
+}
+
+@include media-breakpoint-up(xl) {
+	html,
+	body {}
+}
+
+
+
+
+
+@media print {
+	html,
+	body {}
 }

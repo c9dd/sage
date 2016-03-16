@@ -23,6 +23,18 @@
     "issues": "https://github.com/roots/sage/issues",
     "forum": "https://discourse.roots.io/"
   },
+  "autoload": {
+    "psr-4": {
+      "Roots\\Sage\\": "src/lib/Sage/"
+    },
+    "files": [
+      "src/helpers.php",
+      "src/setup.php",
+      "src/filters.php",
+      "src/admin.php",
+      "src/wp_bootstrap_navwalker.php"
+    ]
+  },
   "require": {
     "php": ">=5.4.0",
     "composer/installers": "~1.0"

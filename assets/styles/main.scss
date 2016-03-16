@@ -2,18 +2,49 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
+@import "../vendor/font-awesome/scss/font-awesome.scss";
+
+@import "common/variables";
+@import "common/colours";
+@import "common/fonts";
+
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+//@import "../vendor/bootstrap-material-design/dist/css/material";
+//@import "../vendor/bootstrap-material-design/dist/css/ripples";
+
 @import "common/global";
+// @import "common/colours";
+
+
 @import "components/buttons";
+@import "components/cards";
+@import "components/columns";
 @import "components/comments";
 @import "components/forms";
+@import "components/google-map";
 @import "components/grid";
+@import "components/instagram-feed";
+@import "components/parallax";
+@import "components/slider";
+@import "components/testimonial";
+@import "components/timeline";
+@import "components/table-blocks";
+@import "components/tripadvisor-blocks";
+@import "components/misc";
 @import "components/wp-classes";
+
+
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
-@import "layouts/tinymce";
+// @import "layouts/tinymce";
+
+
+@import "layouts/media-queries";

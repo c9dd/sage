@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Columns
+   ========================================================================== */
+html,
+body {
+
+	.multi-column {
+
+		&.page-contents {
+
+			.first-column {
+				p { font-weight: 600; }
+
+				&.dropcap p:first-of-type:first-letter {
+					font-weight: 400;
+				}
+
+			}
+
+			.page-contents-block {
+
+				background: $accent-color-14;
+
+				ul {
+					list-style: none;
+					padding: 0;
+
+					li {
+						position: relative;
+						text-align: center;
+
+						a {
+							position: relative;
+							width: 100%;
+							color: $accent-color-7;
+							display: block;
+						}
+
+						&:hover {
+							&:after {
+								position: absolute;
+								content: '';
+								width: 22px;
+								height: 22px;
+								background: linear-gradient(left top, $accent-color-11 0%, $accent-color-11 100%);
+								transform: rotate(45deg);
+								display: block;
+								right: 0;
+								top: 4px;
+							}
+
+							a {
+								background: none;
+								outline: none;
+								color: $accent-color-11;
+								font-weight: 600;
+
+								&:after {
+									position: absolute;
+									content: '';
+									width: 24px;
+									height: 30px;
+									background: linear-gradient(left top, $accent-color-11 0%, $accent-color-11 100%);
+									display: block;
+									right: -14px;
+									top: 0;
+								}
+
+							}
+						}
+
+					}
+
+				}
+				.pc-booking-link {
+					width: 100%;
+					@include font-size(16);
+					font-weight: 600;
+					line-height: 40px;
+				}
+
+				margin-bottom: 30px;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+   // Extra small devices (portrait phones, less than 34em)
+   // No media query since this is the default in Bootstrap
+
+   // Small devices (landscape phones, 34em and up)
+
+   // @include media-breakpoint-up(xs) { ... }
+   // @include media-breakpoint-up(sm) { ... }
+   // @include media-breakpoint-up(md) { ... }
+   // @include media-breakpoint-up(lg) { ... }
+   // @include media-breakpoint-up(xl) { ... }
+
+   // OR
+
+   // @include media-breakpoint-down(xs) { ... }
+   // @include media-breakpoint-down(sm) { ... }
+   // @include media-breakpoint-down(md) { ... }
+   // @include media-breakpoint-down(lg) { ... }
+   // @include media-breakpoint-down(xl) { ... }
+
+@include media-breakpoint-up(sm) {
+	html,
+	body {
+	}
+}
+
+@include media-breakpoint-up(md) {
+	html,
+	body {}
+}
+
+@include media-breakpoint-up(lg) {
+	html,
+	body {}
+}
+
+@include media-breakpoint-up(xl) {
+	html,
+	body {}
+}
+
+
+
+
+
+@media print {
+	html,
+	body {}
+}
