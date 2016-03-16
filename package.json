@@ -1,0 +1,69 @@
+{
+  "name": "sage",
+  "version": "9.0.0",
+  "author": "Roots <team@roots.io>",
+  "homepage": "https://roots.io/sage/",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roots/sage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/roots/sage/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "build:production": "export SAGE_ENV=production && webpack",
+    "build": "export SAGE_ENV=development && webpack",
+    "watch": "export SAGE_ENV=development && node dev.js"
+  },
+  "engines": {
+    "node": ">= 0.12.0",
+    "npm": ">=2.1.5"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "^3.3.0",
+    "autoprefixer": "^6.1.0",
+    "babel-cli": "^6.1.18",
+    "babel-core": "^6.1.20",
+    "babel-eslint": "^5.0.0",
+    "babel-loader": "^6.1.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-register": "^6.5.2",
+    "body-parser": "^1.14.1",
+    "browser-sync": "^2.11.1",
+    "clean-webpack-plugin": "^0.1.3",
+    "css-loader": "^0.22.0",
+    "cssnano": "^3.5.2",
+    "eslint": "^1.9.0",
+    "eslint-config-airbnb": "^1.0.0",
+    "eslint-loader": "^1.3.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "imagemin-pngcrush": "^4.1.0",
+    "imports-loader": "^0.6.5",
+    "monkey-hot-loader": "0.0.3",
+    "node-sass": "^3.4.2",
+    "optimize-css-assets-webpack-plugin": "^1.3.0",
+    "postcss": "^5.0.18",
+    "postcss-loader": "^0.8.0",
+    "resolve-url-loader": "^1.4.3",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.4",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.5.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.5.0",
+    "bootstrap": "github:twbs/bootstrap#v4.0.0-alpha.2",
+    "jquery": "^2.1.4",
+    "tether": "^1.2.0"
+  }
+}
