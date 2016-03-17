@@ -32,46 +32,46 @@ html {
 
 
 @mixin font-size($sizeValue) {	// PX value passed
-	$baseSizeValue	: 	0; 								// Set default
+	$baseSizeValue	: 	0; 								              // Set default
 	$fontSize		    : 	($baseSizeValue + $sizeValue);	// Calc font size as px
-	$remValue		    : 	($sizeValue / 10);				// Calc font sizeas as rem
-	$lineHieght		  :	$fontSize + 2;					// Calc line height
-	font-size		    : 	$fontSize + px;					// Print font size in px (fallback)
-	font-size		    :	$remValue + rem;				// Print font size in rem
-	line-height		  : 	$lineHieght + px;				// Print line height
+	$remValue		    : 	($sizeValue / 10);				      // Calc font sizeas as rem
+	$lineHieght		  :	  $fontSize + 2;					        // Calc line height
+	font-size		    : 	$fontSize + px;					        // Print font size in px (fallback)
+	font-size		    :	  $remValue + rem;				        // Print font size in rem
+	line-height		  : 	$lineHieght + px;				        // Print line height
 }
 
 
 $style: normal !global;
 
 @mixin bold($style) {
-	font-family: "Din Display Pro Regular", 'Muli', 'Roboto', sans-serif;
-	font-size-adjust: 0.49;
-	font-weight: 700;
-	font-style: $style;
+	font-family      : 'Din Display Pro Regular', 'Muli', 'Roboto', sans-serif;
+	font-size-adjust : 0.49;
+	font-weight      : 700;
+	font-style       : $style;
 }
 
 @mixin regular($style) {
-	font-family: "Din Display Pro Regular", 'Muli', 'Roboto', sans-serif;
-	font-size-adjust: 0.48;
-	font-weight: 400;
-	font-style: $style;
+  font-family      : 'Din Display Pro Regular', 'Muli', 'Roboto', sans-serif;
+	font-size-adjust : 0.48;
+	font-weight      : 400;
+	font-style       : $style;
 }
 
 @mixin light($style)	{
-	font-family: "Din Display Pro Light", 'Muli', 'Roboto', sans-serif;
-	font-size-adjust: 0.44;
-	font-weight: 300;
-	font-style: $style;
+  font-family      : 'Din Display Pro Regular', 'Muli', 'Roboto', sans-serif;
+	font-size-adjust : 0.44;
+	font-weight      : 300;
+	font-style       : $style;
 }
 
 body {
 	@include regular(normal);
-	font-size-adjust: 0.48;
-	font-weight: normal;
-	font-smooth: always;
-	-webkit-font-smoothing: antialiased;
-	color: $accent-color-15;
+	font-size-adjust       : 0.48;
+	font-weight            : normal;
+	font-smooth            : always;
+	-webkit-font-smoothing : antialiased;
+	color                  : $accent-color-15;
 }
 
 .link-love {
@@ -102,7 +102,9 @@ p {
 
 
 strong,
-b { @include bold(normal); }
+b {
+  @include bold(normal);
+}
 
 a {
 	color: $brand-color-1;
@@ -146,7 +148,7 @@ blockquote {
 		display: block;
 		position: absolute;
 		@include font-size(90);
-		font-family: Lobster, helvetica, arial, sans-serif;
+		font-family: 'Lobster', helvetica, arial, sans-serif;
 	}
 
 	&:before {
@@ -194,7 +196,11 @@ blockquote {
 	//outline: 1px solid red;
 }
 
-.socicon:empty { width: 1em; }
+.socicon {
+  &:empty {
+    width: 1em;
+  }
+}
 
 .socicon-twitter {
 	a {

@@ -5,6 +5,10 @@
 
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
 
+
+@import "common/colours";
+@import "common/fonts";
+
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
@@ -12,8 +16,6 @@
 @import "components/grid";
 @import "components/wp-classes";
 
-@import "common/colours";
-@import "common/fonts";
 @import "components/cards"; // Seems to be missing from S9?
 @import "components/misc";
 

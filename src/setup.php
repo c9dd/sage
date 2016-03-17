@@ -8,6 +8,13 @@ use Roots\Sage\Template;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('main.js'), ['jquery'], null, true);
+
+    // Custom scripts
+    wp_enqueue_script('sage/smoothscroll.js', asset_path('jquery.smooth-scroll.min.js'), ['jquery'], null, true);
+    wp_enqueue_script('sage/skrollr.js', asset_path('skrollr.min.js'), ['jquery'], null, true);
+
+    wp_enqueue_script('sage/extrascripts.js', asset_path('extra-scripts.min.js'), ['jquery'], null, true);
+
 }, 100);
 
 /**
