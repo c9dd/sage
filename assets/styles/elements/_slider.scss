@@ -1,0 +1,326 @@
+html,
+body {
+	/* ==========================================================================
+	Slider
+	========================================================================== */
+	// this removes the margin on the new wrapper created IF we have it at full screen
+	.wrap.primary.container.after-slider {
+		margin-top: 0;
+	}
+
+	.slider-area {
+		margin-bottom: 30px;
+
+		.carousel {
+
+
+			&.carousel-fade { // If we want a fade effect
+				 .carousel-inner {
+			        .item {
+			            transition-property: opacity;
+			        }
+
+			        .item,
+			        .active.left,
+			        .active.right {
+			            opacity: 0;
+			        }
+
+			        .active,
+			        .next.left,
+			        .prev.right {
+			            opacity: 1;
+			        }
+
+			        .next,
+			        .prev,
+			        .active.left,
+			        .active.right {
+			            left: 0;
+			            transform: translate3d(0, 0, 0);
+			        }
+			    }
+
+			    .carousel-control {
+			        z-index: 2;
+			    }
+
+			}
+
+
+			&.carousel-slide { // If we want a slide effect
+
+				overflow: hidden;
+				transition: all 2s ease;
+
+				.slides {
+					transition: all 2s ease;
+				}
+			}
+
+			.slides {
+				min-height: 0;
+				margin-bottom: 0;
+				.item {
+					overflow: hidden;
+					aside {
+						padding: 0;
+
+						img {
+							width: 100% !important;
+							height: 100% !important;
+						}
+					}
+				}
+			}
+
+
+
+
+
+			a {
+				&:focus,
+				&:active,
+				&:hover { outline: none !important; }
+			}
+
+			.image-slide {
+
+
+				.slider-text-area {
+
+					.carousel-caption {
+						position: absolute;
+						left: 15%;
+						right: 15%;
+						top: 20px;
+						z-index: 10;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						color: rgb(255, 255, 255);
+						text-align: center;
+						text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+					}
+
+					.title {
+						text-align: center;
+						display: table;
+						margin: 0 auto;
+
+						h1 {
+							border: 3px solid $accent-color-8;
+							background: rgba(166,166,166,0.5);
+							padding: 10px 14px 10px 28px;
+							width: auto;
+
+							span {
+								@include font-size(50);
+								font-weight: 300;
+								letter-spacing: -2px;
+								color: $accent-color-8;
+								text-shadow: 1px 1px 10px $accent-color-10;
+								position: relative;
+
+								&::before {
+									font-family: 'FontAwesome';
+									@include font-size(30);
+									position: absolute;
+									top: 26%;
+									left: -15px;
+									content: "\f105";
+									color: $accent-color-1;
+								}
+							}
+						}
+					}
+
+					.text {
+
+						p {
+							@include font-size(20);
+							color: $accent-color-8;
+							text-shadow: 1px 1px 10px $accent-color-10;
+							max-width: 95.5%;
+						}
+					}
+
+
+					a {
+						&:hover { outline: none; }
+
+						&.slider-link {
+							border-radius: 0;
+							border: 3px solid $accent-color-4;
+							@include font-size(18);
+							color: $accent-color-8;
+							display: table;
+							margin: 15px auto;
+
+							background: $accent-color-4;
+
+
+
+							&:hover { border-color: darken($accent-color-4, 10%); }
+						}
+
+					}
+
+
+				}
+
+			}
+
+			.video-slide {
+				background: black;
+				.embed-container {
+					padding-top: 0;
+					padding-bottom: 42.25%;
+				}
+			}
+
+
+			&:hover .carousel-indicators { bottom: 30px; height: 30px; }
+
+			.carousel-indicators {
+
+				bottom: -30px;
+				height: 0;
+				overflow: hidden;
+
+				li {
+					background: none;
+					width: 22px;
+					height: 22px;
+					box-shadow: 0 0 0 2px $accent-color-8 inset;
+
+					&.active,
+					&:hover {
+						background: $accent-color-8;
+						opacity: 0.5;
+						border: none;
+						box-shadow: none;
+					}
+
+					&.active {  opacity: 1; }
+				}
+			}
+
+
+
+			.flex-direction-nav {
+				margin-bottom: 0;
+
+			}
+
+
+
+				a.carousel-control {
+					width: 38px;
+					height: 38px;
+					border-radius: 30px;
+					margin: -20px 0 0;
+					display: block;
+					background-image: none;
+					background: $accent-color-7;
+					color: $accent-color-8;
+
+					position: absolute;
+					top: 50%;
+					z-index: 10;
+					cursor: pointer;
+					text-indent: 0;
+					opacity: 1;
+					-webkit-transition: all .3s ease;
+
+
+					span { display: none; }
+
+					&.left,
+					&.right {
+
+						&::before {
+							font-family: 'FontAwesome';
+							position: absolute;
+							left: 11px;
+							@include font-size(18);
+							line-height: 38px;
+						}
+					}
+
+					&.right {
+						right: -100px;
+						&::before { content: '\F061'; }
+					}
+					&.left {
+						left: -100px;
+						&::before { content: '\F060'; }
+					}
+				}
+
+
+			&:hover {
+				a {
+					&.right,
+					&.left { outline: none; }
+
+					&.right { right: 40px; }
+					&.left { left: 40px; }
+				}
+			}
+		}
+
+	}
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+   // Extra small devices (portrait phones, less than 34em)
+   // No media query since this is the default in Bootstrap
+
+   // Small devices (landscape phones, 34em and up)
+
+   // @include media-breakpoint-up(xs) { ... }
+   // @include media-breakpoint-up(sm) { ... }
+   // @include media-breakpoint-up(md) { ... }
+   // @include media-breakpoint-up(lg) { ... }
+   // @include media-breakpoint-up(xl) { ... }
+
+   // OR
+
+   // @include media-breakpoint-down(xs) { ... }
+   // @include media-breakpoint-down(sm) { ... }
+   // @include media-breakpoint-down(md) { ... }
+   // @include media-breakpoint-down(lg) { ... }
+   // @include media-breakpoint-down(xl) { ... }
+
+@include media-breakpoint-up(sm) {
+	html,
+	body {
+	}
+}
+
+@include media-breakpoint-up(md) {
+	html,
+	body {}
+}
+
+@include media-breakpoint-up(lg) {
+	html,
+	body {}
+}
+
+@include media-breakpoint-up(xl) {
+	html,
+	body {}
+}
+
+
+
+
+
+@media print {
+	html,
+	body {}
+}

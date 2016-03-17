@@ -21,11 +21,11 @@ Notes:
 
                     4. setup dev.js                     // The dev url must be specified here for 'watch' to work
 
-                    5. npm build                        // Builds all the assets
+                    5. npm run build                    // Builds all the assets
 
-                    6. npm watch                        // Runs the browser sync
+                    6. npm run watch                    // Runs the browser sync
 
-                    7. npm production                   // Build minimized assets for production use
+                    7. npm run build:production         // Build minimized assets for production use
 
 
                     There are a few config variables / paths in webpack.config.js that needs to be changed per installation.

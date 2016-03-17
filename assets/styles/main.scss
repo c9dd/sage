@@ -3,15 +3,36 @@
 // Import Boostrap from node_modules/...
 @import "~bootstrap/scss/bootstrap";
 
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
+
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
+
+@import "common/colours";
+@import "common/fonts";
+@import "components/cards"; // Seems to be missing from S9?
+@import "components/misc";
+
+
+@import "elements/columns";
+@import "elements/google-map";
+@import "elements/instagram-feed";
+@import "elements/parallax";
+@import "elements/slider";
+@import "elements/testimonial";
+@import "elements/timeline";
+@import "elements/table-blocks";
+@import "elements/tripadvisor-blocks";
+
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+@import "layouts/media-queries";
