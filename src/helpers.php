@@ -79,36 +79,45 @@ function title()
 	CUSTOM FUNCTIONS START HERE
 
    ============================================================================================================================================================================================================================== */
-
+// require_once get_stylesheet_directory() . '/assets/imports/acf/fewbricks-master/init.php';
 /* ==========================================================================
    TGM Plugin Activation - Required or recommend plugins for the theme
    ========================================================================== */
 require_once get_stylesheet_directory() . '/assets/imports/the-plugin-list.php';
 
-
+// NOTE:
+// Generate a random string that is used throughout various elemnts within the theme
+// SO DON'T REMOVE IT!
 function generateRandomString($length = 10) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++)
-    {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
+  $characters       = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $charactersLength = strlen($characters);
+  $randomString     = '';
+
+  for ($i = 0; $i < $length; $i++)
+  {
+    $randomString .= $characters[rand(0, $charactersLength - 1)];
+  }
+  return $randomString;
 }
 
 /* ==========================================================================
    Adds ACF data to Yoast's SEO tool! - https://goo.gl/7MjA9Q
    ========================================================================== */
-if ( is_admin() ) { // check to make sure we aren't on the front end
-	 add_filter('wpseo_pre_analysis_post_content', __NAMESPACE__ . '\\add_custom_to_yoast');
+
+  // NOTE:
+  // Check to make sure we aren't on the front-end
+  if ( is_admin() )
+  {
+	add_filter('wpseo_pre_analysis_post_content', __NAMESPACE__ . '\\add_custom_to_yoast');
 
 	function add_custom_to_yoast( $content ) {
 		global $post;
-		$pid = $post->ID;
-
+		$pid    = $post->ID;
 		$custom = get_post_custom($pid);
-		unset($custom['_yoast_wpseo_focuskw']); // Don't count the keyword in the Yoast field!
+
+    // NOTE:
+    // Don't count the keyword in the Yoast field!
+		unset($custom['_yoast_wpseo_focuskw']);
 
 		foreach( $custom as $key => $value )
     {
@@ -120,8 +129,10 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
 		$content = $content . ' ' . $custom_content;
 		return $content;
 
+    // NOTE:
+    // Don't let WP execute this twice
 		remove_filter('wpseo_pre_analysis_post_content', __NAMESPACE__ . '\\add_custom_to_yoast');
-    // don't let WP execute this twice
+
 	}
 }
 
@@ -132,7 +143,7 @@ if ( is_admin() ) { // check to make sure we aren't on the front end
    Trims excerpt by value
    ========================================================================== */
 function excerpt($num) {
-	$limit = $num+1;
+	$limit   = $num+1;
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
 	array_pop($excerpt);
 	$excerpt = implode(" ",$excerpt)."…";
@@ -174,6 +185,7 @@ function time_ago( $type = 'post' ) {
 function is_blog() {
 	global  $post;
 	$posttype = get_post_type($post);
+
 	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
 
@@ -184,12 +196,14 @@ function is_blog() {
 
 // Hooks your functions into the correct filters
 function my_add_mce_button() {
-	// check user permissions
+  // NOTE:
+	// Check user permissions
 	if ( !current_user_can( 'edit_posts' ) && !current_user_can( 'edit_pages' ) )
   {
 		return;
 	}
-	// check if WYSIWYG is enabled
+  // NOTE:
+	// Check if WYSIWYG is enabled
 	if ( 'true' == get_user_option( 'rich_editing' ) )
   {
 		add_filter( 'mce_external_plugins', __NAMESPACE__ . '\\my_add_tinymce_plugin' );
@@ -198,12 +212,14 @@ function my_add_mce_button() {
 }
 add_action('admin_head', __NAMESPACE__ . '\\my_add_mce_button');
 
+// NOTE:
 // Declare script for new button
 function my_add_tinymce_plugin( $plugin_array ) {
 	$plugin_array['my_mce_button'] = get_template_directory_uri() .'/assets/scripts/mce-button.js';
 	return $plugin_array;
 }
 
+// NOTE:
 // Register new button in the editor
 function my_register_mce_button( $buttons ) {
 	array_push( $buttons, 'my_mce_button' );
@@ -453,12 +469,13 @@ add_filter('upload_mimes', __NAMESPACE__ . '\\custom_upload_mimes');
 
 function my_dynamic_sidebar_params( $params ) {
 
-	// get widget vars
+  // NOTE:
+	// Get widget vars
 	$widget_name = $params[0]['widget_name'];
 	$widget_id   = $params[0]['widget_id'];
 
-
-	// bail early if this widget is not a Banners widget
+  // NOTE:
+	// Bail early if this widget is not a Banners widget
 	if( $widget_name != 'Banners' )
   {
 		return $params;
@@ -488,24 +505,29 @@ function my_dynamic_sidebar_params( $params ) {
     {
 
   	  while ( have_rows('banner', 'widget_' . $widget_id) ) : the_row();  // ACF
-
+        // NOTE:
   	  	// Get todays time stamp
   	  	$todaysDate				   = time();
 
+        // NOTE:
   	  	// If we have a date to deactivate the banner, get that too
   	  	$deactivateDate			 = get_sub_field('deactivate_banner_on'); // ACF
 
+        // NOTE:
   	  	// For conditions
   	  	$showBanner          = true;
 
+        // NOTE:
   	  	// If we have a date to deactivate the banner ...
   	  	if ( $deactivateDate )
         {
 
+          // NOTE:
     	  	// And IF todays date is greater that the deactivate date ...
     	  	if ( $todaysDate > $deactivateDate )
           {
 
+            // NOTE:
   	  	    // Set the show condition to be false
   	  		  $showBanner = false;
 
@@ -513,19 +535,22 @@ function my_dynamic_sidebar_params( $params ) {
 
   	  	};
 
+        // NOTE:
   	  	// Now only do this stuff if the banner is not deactivated
   	  	if ( $showBanner )
         {
 
     	  	$image 					     = get_sub_field('banner_image'); // ACF
 
-    			// vars
+          // NOTE:
+    			// Vars
     			$url 					       = $image['url'];
     			$title 					     = $image['title'];
     			$alt 					       = $image['alt'];
     			$caption 				     = $image['caption'];
 
-    			// thumbnail
+          // NOTE:
+    			// Thumbnail
     			$size 					     = 'medium';
     			$square					     = $image['sizes'][ $size ];
     			$width 					     = $image['sizes'][ $size . '-width' ];
@@ -577,7 +602,7 @@ add_filter('dynamic_sidebar_params', __NAMESPACE__ . '\\my_dynamic_sidebar_param
 
 
 
-
+// NOTE:
 // Device detection
 function deviceType() {
 
@@ -620,6 +645,8 @@ function deviceType() {
 	if (strpos(strtolower($_SERVER['HTTP_USER_AGENT']),'opera mini') > 0)
   {
     $mobile_browser++;
+
+    // NOTE:
     // Check for tablets on opera mini alternative headers
     $stock_ua = strtolower(isset($_SERVER['HTTP_X_OPERAMINI_PHONE_UA'])?$_SERVER['HTTP_X_OPERAMINI_PHONE_UA']:(isset($_SERVER['HTTP_DEVICE_STOCK_UA'])?$_SERVER['HTTP_DEVICE_STOCK_UA']:''));
     if (preg_match('/(tablet|ipad|playbook)|(android(?!.*mobile))/i', $stock_ua))
@@ -630,22 +657,25 @@ function deviceType() {
 
 	if ($tablet_browser > 0)
   {
-    // do something for tablet devices
-    // print 'is tablet';
+    // NOTE:
+    // Do something for tablet devices
+    // Print 'is tablet';
 
     $deviceType = 'tablet';
 	}
 	else if ($mobile_browser > 0)
   {
-    // do something for mobile devices
-    // print 'is mobile';
+    // NOTE:
+    // Do something for mobile devices
+    // Print 'is mobile';
 
     $deviceType = 'mobile';
 	}
 	else
   {
-    // do something for everything else
-    // print 'is desktop';
+    // NOTE:
+    // Do something for everything else
+    // Print 'is desktop';
 
     $deviceType = 'desktop';
 	}
@@ -662,9 +692,11 @@ $deviceType = deviceType();
    ========================================================================== */
 
 function bootstapHidden() {
+  // NOTE:
 	// Create empty array to store in to
 	$notVisibleOn = array();
 
+  // NOTE:
 	// if not wanted to display on Large devices
 	if( !in_array( 'col-lg', get_sub_field('element_visible_on') ) )
   {
@@ -672,6 +704,7 @@ function bootstapHidden() {
 		$lgHidden = true;
 	}
 
+  // NOTE:
 	// if not wanted to display on Medium devices
 	if( !in_array( 'col-md', get_sub_field('element_visible_on') ) )
   {
@@ -679,6 +712,7 @@ function bootstapHidden() {
 		$mdHidden = true;
 	}
 
+  // NOTE:
 	// if not wanted to display on Small devices
 	if( !in_array( 'col-sm', get_sub_field('element_visible_on') ) )
   {
@@ -686,6 +720,7 @@ function bootstapHidden() {
 		$smHidden = true;
 	}
 
+  // NOTE:
 	// if not wanted to display on Xtra Small devices
 	if( !in_array( 'col-xs', get_sub_field('element_visible_on') ) )
   {
@@ -700,6 +735,7 @@ function echoBootstrapHidden() {
 
 	$notVisibleOn = bootstapHidden();
 
+  // NOTE:
 	// seporate them out ready to use
 	foreach ($notVisibleOn as $hiddenOn)
   {
