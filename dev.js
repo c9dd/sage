@@ -3,7 +3,7 @@
 var webpack = require('webpack'),
     webpackDevMiddleware = require('webpack-dev-middleware'),
     webpackHotMiddleware = require('webpack-hot-middleware'),
-    browserSync = require('browser-sync');
+    browserSync          = require('browser-sync');
 
 var devBuildConfig = require('./webpack.config'),
     compiler = webpack(devBuildConfig);
