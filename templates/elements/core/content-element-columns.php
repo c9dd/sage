@@ -77,9 +77,9 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'one_column'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
 			}
 
 		?>
@@ -99,10 +99,10 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'two_columns'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
 			}
 
 		?>
@@ -126,10 +126,10 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'two_columns_25_75'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
 			}
 
 		?>
@@ -153,10 +153,10 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'two_columns_75_25'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
 			}
 
 		?>
@@ -179,11 +179,11 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'three_columns'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
-				$animateElement3 		= 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
 			}
 
 		?>
@@ -222,11 +222,11 @@ $randomString = App\generateRandomString();
 
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
-				$animateElement3 		= 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
 			}
 
 		?>
@@ -253,11 +253,11 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'three_columns_50_25_25'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
-				$animateElement3 		= 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
 			}
 
 		?>
@@ -277,6 +277,38 @@ $randomString = App\generateRandomString();
 	</div>
 
 
+	<?php
+	/* ==========================================================================
+		Layout 3 columns 25% 50% 20%
+		 ========================================================================== */
+
+	elseif(get_row_layout() == 'three_columns_25_50_25'):
+
+		if ( get_sub_field ('animate_elements') ) {
+			$animateElementsClass 	 = 'animate-elements';
+			$animateElements 		     = 'data-animate="true" ';
+			$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+			$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+			$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+		}
+
+	?>
+
+<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+		<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
+			<?php the_sub_field('column_one'); ?>
+		</section>
+
+		<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-6" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
+			<?php the_sub_field('column_two'); ?>
+		</section>
+
+		<section class="column_three<?php if (get_sub_field('column_three_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 last-column" style="margin-top: <?php the_sub_field('column_three_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_three_section_animation'); ?>" <?= $animateElements.$animateElement3; ?>>
+			<?php the_sub_field('column_three'); ?>
+		</section>
+</div>
+
+
 		<?php
 		/* ==========================================================================
 			Layout 4 columns
@@ -285,12 +317,12 @@ $randomString = App\generateRandomString();
 		elseif(get_row_layout() == 'four_columns'):
 
 			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	= 'animate-elements';
-				$animateElements 		= 'data-animate="true" ';
-				$animateElement1 		= 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		= 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
-				$animateElement3 		= 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
-				$animateElement3 		= 'data-animation-type="'. get_sub_field("column_four_section_animation") . '"';
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+				$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_four_section_animation") . '"';
 			}
 
 		?>

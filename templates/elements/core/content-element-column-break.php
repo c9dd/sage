@@ -1,11 +1,11 @@
 <?php
 /* ==========================================================================
-	Column brake - Or some other HTML via WP submition
+	Row brake / spacer
+	was column break
    ========================================================================== */
-
-// the_sub_field('column_break');
+// OLD - the_sub_field('column_break');
+// NEW - the_sub_field('row_break');
 
 ?>
-<div class="column-break <?php App\echoBootstrapHidden(); ?>" style="height: <?php the_sub_field('column_break') ?>px">
-
+<div class="row-break <?php App\echoBootstrapHidden(); ?>" style="height: <?php the_sub_field('row_break') ?>px">
 </div>
