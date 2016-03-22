@@ -74,16 +74,38 @@ function title()
 }
 
 
-/* ==============================================================================================================================================================================================================================
+/* ============================================================================================================================================================================================
 
-	CUSTOM FUNCTIONS START HERE
+	 CUSTOM FUNCTIONS START HERE
 
-   ============================================================================================================================================================================================================================== */
-// require_once get_stylesheet_directory() . '/assets/imports/acf/fewbricks-master/init.php';
+   ============================================================================================================================================================================================ */
+
 /* ==========================================================================
    TGM Plugin Activation - Required or recommend plugins for the theme
    ========================================================================== */
-require_once get_stylesheet_directory() . '/assets/imports/the-plugin-list.php';
+
+   require_once get_stylesheet_directory() . '/assets/imports/the-plugin-list.php';
+
+
+
+/* ==========================================================================
+  Adds ACF Local JSON files for backup needs
+  See http://goo.gl/bBk67c  &  http://goo.gl/oiNJ7g
+  ========================================================================== */
+
+  add_filter('acf/settings/save_json', __NAMESPACE__ . '\\my_acf_json_save_point');
+
+  function my_acf_json_save_point( $path ) {
+
+    // update path
+    $path = get_stylesheet_directory() . '/assets/acf/json/';
+
+    // return
+    return $path;
+
+  }
+
+
 
 // NOTE:
 // Generate a random string that is used throughout various elemnts within the theme
@@ -99,6 +121,10 @@ function generateRandomString($length = 10) {
   }
   return $randomString;
 }
+
+
+
+
 
 /* ==========================================================================
    Adds ACF data to Yoast's SEO tool! - https://goo.gl/7MjA9Q
