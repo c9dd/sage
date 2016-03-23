@@ -28,9 +28,24 @@ Notes:
                     7. npm run build:production         // Build minimized assets for production use
 
 
-                    There are a few config variables / paths in webpack.config.js that needs to be changed per installation.
+
+Special Notes:      There are a few config variables / paths in webpack.config.js that needs to be changed per installation.
+
+                    You can have .js files added to the 'dist' folder by adding them to 'webpack.config.js' ( see lines 38+ in there for instructions )
+                    or you can add extra jQuery via 'assets/styles/main.js' directly by using it's load events, i.e if the body is home do something
+                    load the file, take a look, you will get it.
 
 
+                    All .scss files can be included within the 'assets/styles/main.scss' file to have it compiled & injected in to the js in development
+                    or import it within the 'assets/styles/main.js' as a seporate file and still have it injected within the js. This only goes for
+                    the front-end stuff. Admin only styles need to be done another way ( see bellow ).
+
+
+                    As always you can use 'wp_enqueue_script' & 'wp_enqueue_style' within the 'src/helpers.php' to have them load within the theme.
+
+
+
+To Do:              Learn how to have the 'custom-admin-style.scss' file auto complie & not have to use codekit to do it manually
 
                     UpUp scripts need to be copied to the WP root in order to work & require and valid SSL Certificate also
 */
