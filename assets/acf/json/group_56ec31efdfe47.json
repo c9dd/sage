@@ -1,0 +1,1346 @@
+{
+    "key": "group_56ec31efdfe47",
+    "title": "<i class=\"fa fa-picture-o fa-fw\"><\/i> Slider Area",
+    "fields": [
+        {
+            "key": "field_56ec31f03a254",
+            "label": "Slides",
+            "name": "tab1",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_55438dd3ec9e8 field_type-tab field_key-field_55438dd3ec9e8 field_type-tab field_key-field_55438dd3ec9e8",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56ec31f03a26b",
+            "label": "Show Slides",
+            "name": "show_slides",
+            "type": "checkbox",
+            "instructions": "Do you want a slider on the top of this page?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-checkbox field_key-field_55438dd3ec9fc field_type-checkbox field_key-field_55438dd3ec9fc field_type-checkbox field_key-field_55438dd3ec9fc",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes"
+            },
+            "default_value": {
+                "Yes": "Yes"
+            },
+            "layout": "horizontal",
+            "toggle": 0
+        },
+        {
+            "key": "field_56ec31f03a27c",
+            "label": "Slides",
+            "name": "slides",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-repeater field_key-field_55438dd3eca0d field_type-repeater field_key-field_55438dd3eca0d field_type-repeater field_key-field_55438dd3eca0d",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "<i class=\"fa fa-plus-circle fa-fw\"><\/i> Add Slide",
+            "sub_fields": [
+                {
+                    "key": "field_56ec31f047fa0",
+                    "label": "Slide Type",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-tab field_key-field_554395c5d9401 field_type-tab field_key-field_554395c5d9401 field_type-tab field_key-field_554395c5d9401",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_56ec31f047fb3",
+                    "label": "Slide Type",
+                    "name": "slide_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-radio field_key-field_55438dd408465 field_type-radio field_key-field_55438dd408465 field_type-radio field_key-field_55438dd408465",
+                        "id": ""
+                    },
+                    "choices": {
+                        "image": "Image",
+                        "video": "Video"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "image",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_56ec31f047fc1",
+                    "label": "Slide Image",
+                    "name": "slide_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-image field_key-field_55438dd4084ab field_type-image field_key-field_55438dd4084ab field_type-image field_key-field_55438dd4084ab",
+                        "id": ""
+                    },
+                    "preview_size": "medium",
+                    "library": "all",
+                    "return_format": "url",
+                    "min_width": 0,
+                    "min_height": 0,
+                    "min_size": 0,
+                    "max_width": 0,
+                    "max_height": 0,
+                    "max_size": 0,
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_56ec31f047fcf",
+                    "label": "Video Type",
+                    "name": "slide_video_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-radio field_key-field_554397412d483 field_type-radio field_key-field_554397412d483 field_type-radio field_key-field_554397412d483",
+                        "id": ""
+                    },
+                    "choices": {
+                        "url": "I have the video address (From YouTube\/Vimeo)",
+                        "embed": "I have an embed code"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "url",
+                    "layout": "vertical"
+                },
+                {
+                    "key": "field_56ec31f047fdd",
+                    "label": "Video URL",
+                    "name": "video_url",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "video"
+                            },
+                            {
+                                "field": "field_56ec31f047fcf",
+                                "operator": "==",
+                                "value": "url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-text field_key-field_55438dd4084fc field_type-text field_key-field_55438dd4084fc field_type-text field_key-field_55438dd4084fc",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f047feb",
+                    "label": "Video Display Options",
+                    "name": "video_display_options",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "video"
+                            },
+                            {
+                                "field": "field_56ec31f047fcf",
+                                "operator": "==",
+                                "value": "url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-checkbox field_key-field_55438dd40851a field_type-checkbox field_key-field_55438dd40851a field_type-checkbox field_key-field_55438dd40851a",
+                        "id": ""
+                    },
+                    "choices": {
+                        "loop": "Loop this video",
+                        "portrait": "Show portrait",
+                        "title": "Show this videos title",
+                        "byline": "Show 'Byline'"
+                    },
+                    "default_value": {
+                        "": ""
+                    },
+                    "layout": "horizontal",
+                    "toggle": 0
+                },
+                {
+                    "key": "field_56ec31f047ff9",
+                    "label": "Colour Override",
+                    "name": "video_colour_override",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "video"
+                            },
+                            {
+                                "field": "field_56ec31f047fcf",
+                                "operator": "==",
+                                "value": "url"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-color_picker field_key-field_55438dd40852c field_type-color_picker field_key-field_55438dd40852c field_type-color_picker field_key-field_55438dd40852c",
+                        "id": ""
+                    },
+                    "default_value": "#CE0006"
+                },
+                {
+                    "key": "field_56ec31f048007",
+                    "label": "Video Embed Code",
+                    "name": "video_embed_code",
+                    "type": "code_area",
+                    "instructions": "Paste the video embed code (Optional). If field fails to work click 'update' or 'Save Draft' & try again.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fcf",
+                                "operator": "==",
+                                "value": "embed"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-code_area field_key-field_55438dd40853d field_type-code_area field_key-field_55438dd40853d field_type-code_area field_key-field_55438dd40853d",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "code_language": "htmlmixed",
+                    "code_theme": "default",
+                    "new_lines": "",
+                    "placeholder": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f048015",
+                    "label": "Text",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-tab field_key-field_554395e1d9402 field_type-tab field_key-field_554395e1d9402 field_type-tab field_key-field_554395e1d9402",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_56ec31f048023",
+                    "label": "Show Title",
+                    "name": "show_title",
+                    "type": "checkbox",
+                    "instructions": "Show title on slide",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-checkbox field_key-field_55438dd40847a field_type-checkbox field_key-field_55438dd40847a field_type-checkbox field_key-field_55438dd40847a",
+                        "id": ""
+                    },
+                    "choices": {
+                        "true": "Yes"
+                    },
+                    "default_value": {
+                        "true": "true"
+                    },
+                    "layout": "horizontal",
+                    "toggle": 0
+                },
+                {
+                    "key": "field_56ec31f048031",
+                    "label": "Slide Title",
+                    "name": "slide_title",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            },
+                            {
+                                "field": "field_56ec31f048023",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-textarea field_key-field_55438dd40848b field_type-textarea field_key-field_55438dd40848b field_type-textarea field_key-field_55438dd40848b",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f04803f",
+                    "label": "Slide Title Verticle Posision",
+                    "name": "slide_title_verticle_posision",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            },
+                            {
+                                "field": "field_56ec31f048023",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-number field_key-field_55439656d9405 field_type-number field_key-field_55439656d9405 field_type-number field_key-field_55439656d9405",
+                        "id": ""
+                    },
+                    "default_value": 32,
+                    "placeholder": 32,
+                    "prepend": "",
+                    "append": "%",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f04804d",
+                    "label": "Title Animation",
+                    "name": "title_animation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            },
+                            {
+                                "field": "field_56ec31f048023",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "js--animations--title",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "bounce": "bounce",
+                        "flash": "flash",
+                        "pulse": "pulse",
+                        "rubberBand": "rubberBand",
+                        "shake": "shake",
+                        "swing": "swing",
+                        "tada": "tada",
+                        "wobble": "wobble",
+                        "jello": "jello",
+                        "bounceIn": "bounceIn",
+                        "bounceInDown": "bounceInDown",
+                        "bounceInLeft": "bounceInLeft",
+                        "bounceInRight": "bounceInRight",
+                        "bounceInUp": "bounceInUp",
+                        "bounceOut": "bounceOut",
+                        "bounceOutDown": "bounceOutDown",
+                        "bounceOutLeft": "bounceOutLeft",
+                        "bounceOutRight": "bounceOutRight",
+                        "bounceOutUp": "bounceOutUp",
+                        "fadeIn": "fadeIn",
+                        "fadeInDown": "fadeInDown",
+                        "fadeInDownBig": "fadeInDownBig",
+                        "fadeInLeft": "fadeInLeft",
+                        "fadeInLeftBig": "fadeInLeftBig",
+                        "fadeInRight": "fadeInRight",
+                        "fadeInRightBig": "fadeInRightBig",
+                        "fadeInUp": "fadeInUp",
+                        "fadeInUpBig": "fadeInUpBig",
+                        "fadeOut": "fadeOut",
+                        "fadeOutDown": "fadeOutDown",
+                        "fadeOutDownBig": "fadeOutDownBig",
+                        "fadeOutLeft": "fadeOutLeft",
+                        "fadeOutLeftBig": "fadeOutLeftBig",
+                        "fadeOutRight": "fadeOutRight",
+                        "fadeOutRightBig": "fadeOutRightBig",
+                        "fadeOutUp": "fadeOutUp",
+                        "fadeOutUpBig": "fadeOutUpBig",
+                        "flipInX": "flipInX",
+                        "flipInY": "flipInY",
+                        "flipOutX": "flipOutX",
+                        "flipOutY": "flipOutY",
+                        "lightSpeedIn": "lightSpeedIn",
+                        "lightSpeedOut": "lightSpeedOut",
+                        "rotateIn": "rotateIn",
+                        "rotateInDownLeft": "rotateInDownLeft",
+                        "rotateInDownRight": "rotateInDownRight",
+                        "rotateInUpLeft": "rotateInUpLeft",
+                        "rotateInUpRight": "rotateInUpRight",
+                        "rotateOut": "rotateOut",
+                        "rotateOutDownLeft": "rotateOutDownLeft",
+                        "rotateOutDownRight": "rotateOutDownRight",
+                        "rotateOutUpLeft": "rotateOutUpLeft",
+                        "rotateOutUpRight": "rotateOutUpRight",
+                        "hinge": "hinge",
+                        "rollIn": "rollIn",
+                        "rollOut": "rollOut",
+                        "zoomIn": "zoomIn",
+                        "zoomInDown": "zoomInDown",
+                        "zoomInLeft": "zoomInLeft",
+                        "zoomInRight": "zoomInRight",
+                        "zoomInUp": "zoomInUp",
+                        "zoomOut": "zoomOut",
+                        "zoomOutDown": "zoomOutDown",
+                        "zoomOutLeft": "zoomOutLeft",
+                        "zoomOutRight": "zoomOutRight",
+                        "zoomOutUp": "zoomOutUp",
+                        "slideInDown": "slideInDown",
+                        "slideInLeft": "slideInLeft",
+                        "slideInRight": "slideInRight",
+                        "slideInUp": "slideInUp",
+                        "slideOutDown": "slideOutDown",
+                        "slideOutLeft": "slideOutLeft",
+                        "slideOutRight": "slideOutRight",
+                        "slideOutUp": "slideOutUp"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_56ec31f04805b",
+                    "label": "Slide Text",
+                    "name": "slide_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-textarea field_key-field_55438dd40849b field_type-textarea field_key-field_55438dd40849b field_type-textarea field_key-field_55438dd40849b",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f048069",
+                    "label": "Slide Text Verticle Posision",
+                    "name": "slide_text_verticle_posision",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-number field_key-field_55439696d9406 field_type-number field_key-field_55439696d9406 field_type-number field_key-field_55439696d9406",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": 0,
+                    "prepend": "",
+                    "append": "%",
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f048077",
+                    "label": "Text Animation",
+                    "name": "text_animation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            },
+                            {
+                                "field": "field_56ec31f048023",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "js--animations--text",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "bounce": "bounce",
+                        "flash": "flash",
+                        "pulse": "pulse",
+                        "rubberBand": "rubberBand",
+                        "shake": "shake",
+                        "swing": "swing",
+                        "tada": "tada",
+                        "wobble": "wobble",
+                        "jello": "jello",
+                        "bounceIn": "bounceIn",
+                        "bounceInDown": "bounceInDown",
+                        "bounceInLeft": "bounceInLeft",
+                        "bounceInRight": "bounceInRight",
+                        "bounceInUp": "bounceInUp",
+                        "bounceOut": "bounceOut",
+                        "bounceOutDown": "bounceOutDown",
+                        "bounceOutLeft": "bounceOutLeft",
+                        "bounceOutRight": "bounceOutRight",
+                        "bounceOutUp": "bounceOutUp",
+                        "fadeIn": "fadeIn",
+                        "fadeInDown": "fadeInDown",
+                        "fadeInDownBig": "fadeInDownBig",
+                        "fadeInLeft": "fadeInLeft",
+                        "fadeInLeftBig": "fadeInLeftBig",
+                        "fadeInRight": "fadeInRight",
+                        "fadeInRightBig": "fadeInRightBig",
+                        "fadeInUp": "fadeInUp",
+                        "fadeInUpBig": "fadeInUpBig",
+                        "fadeOut": "fadeOut",
+                        "fadeOutDown": "fadeOutDown",
+                        "fadeOutDownBig": "fadeOutDownBig",
+                        "fadeOutLeft": "fadeOutLeft",
+                        "fadeOutLeftBig": "fadeOutLeftBig",
+                        "fadeOutRight": "fadeOutRight",
+                        "fadeOutRightBig": "fadeOutRightBig",
+                        "fadeOutUp": "fadeOutUp",
+                        "fadeOutUpBig": "fadeOutUpBig",
+                        "flipInX": "flipInX",
+                        "flipInY": "flipInY",
+                        "flipOutX": "flipOutX",
+                        "flipOutY": "flipOutY",
+                        "lightSpeedIn": "lightSpeedIn",
+                        "lightSpeedOut": "lightSpeedOut",
+                        "rotateIn": "rotateIn",
+                        "rotateInDownLeft": "rotateInDownLeft",
+                        "rotateInDownRight": "rotateInDownRight",
+                        "rotateInUpLeft": "rotateInUpLeft",
+                        "rotateInUpRight": "rotateInUpRight",
+                        "rotateOut": "rotateOut",
+                        "rotateOutDownLeft": "rotateOutDownLeft",
+                        "rotateOutDownRight": "rotateOutDownRight",
+                        "rotateOutUpLeft": "rotateOutUpLeft",
+                        "rotateOutUpRight": "rotateOutUpRight",
+                        "hinge": "hinge",
+                        "rollIn": "rollIn",
+                        "rollOut": "rollOut",
+                        "zoomIn": "zoomIn",
+                        "zoomInDown": "zoomInDown",
+                        "zoomInLeft": "zoomInLeft",
+                        "zoomInRight": "zoomInRight",
+                        "zoomInUp": "zoomInUp",
+                        "zoomOut": "zoomOut",
+                        "zoomOutDown": "zoomOutDown",
+                        "zoomOutLeft": "zoomOutLeft",
+                        "zoomOutRight": "zoomOutRight",
+                        "zoomOutUp": "zoomOutUp",
+                        "slideInDown": "slideInDown",
+                        "slideInLeft": "slideInLeft",
+                        "slideInRight": "slideInRight",
+                        "slideInUp": "slideInUp",
+                        "slideOutDown": "slideOutDown",
+                        "slideOutLeft": "slideOutLeft",
+                        "slideOutRight": "slideOutRight",
+                        "slideOutUp": "slideOutUp"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_56ec31f048084",
+                    "label": "Links",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-tab field_key-field_554395fbd9403 field_type-tab field_key-field_554395fbd9403 field_type-tab field_key-field_554395fbd9403",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_56ec31f04809f",
+                    "label": "Slide Link (Internal)",
+                    "name": "slide_link_internal",
+                    "type": "page_link",
+                    "instructions": "Link the slide to a internal page\/post",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-page_link field_key-field_55438dd4084bb field_type-page_link field_key-field_55438dd4084bb field_type-page_link field_key-field_55438dd4084bb",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "post",
+                        "page"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "taxonomy": []
+                },
+                {
+                    "key": "field_56ec31f0480d4",
+                    "label": "Slide Link (External)",
+                    "name": "slide_link_external",
+                    "type": "text",
+                    "instructions": "Link slide to an external URL",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-text field_key-field_55438dd4084ca field_type-text field_key-field_55438dd4084ca field_type-text field_key-field_55438dd4084ca",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "formatting": "none",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f0480f7",
+                    "label": "Slide Link Text",
+                    "name": "slide_link_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-text field_key-field_55438dd4084da field_type-text field_key-field_55438dd4084da field_type-text field_key-field_55438dd4084da",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "formatting": "html",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec31f04810a",
+                    "label": "Link Animation",
+                    "name": "link_animation",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f047fb3",
+                                "operator": "==",
+                                "value": "image"
+                            },
+                            {
+                                "field": "field_56ec31f048023",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "js--animations--link",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "bounce": "bounce",
+                        "flash": "flash",
+                        "pulse": "pulse",
+                        "rubberBand": "rubberBand",
+                        "shake": "shake",
+                        "swing": "swing",
+                        "tada": "tada",
+                        "wobble": "wobble",
+                        "jello": "jello",
+                        "bounceIn": "bounceIn",
+                        "bounceInDown": "bounceInDown",
+                        "bounceInLeft": "bounceInLeft",
+                        "bounceInRight": "bounceInRight",
+                        "bounceInUp": "bounceInUp",
+                        "bounceOut": "bounceOut",
+                        "bounceOutDown": "bounceOutDown",
+                        "bounceOutLeft": "bounceOutLeft",
+                        "bounceOutRight": "bounceOutRight",
+                        "bounceOutUp": "bounceOutUp",
+                        "fadeIn": "fadeIn",
+                        "fadeInDown": "fadeInDown",
+                        "fadeInDownBig": "fadeInDownBig",
+                        "fadeInLeft": "fadeInLeft",
+                        "fadeInLeftBig": "fadeInLeftBig",
+                        "fadeInRight": "fadeInRight",
+                        "fadeInRightBig": "fadeInRightBig",
+                        "fadeInUp": "fadeInUp",
+                        "fadeInUpBig": "fadeInUpBig",
+                        "fadeOut": "fadeOut",
+                        "fadeOutDown": "fadeOutDown",
+                        "fadeOutDownBig": "fadeOutDownBig",
+                        "fadeOutLeft": "fadeOutLeft",
+                        "fadeOutLeftBig": "fadeOutLeftBig",
+                        "fadeOutRight": "fadeOutRight",
+                        "fadeOutRightBig": "fadeOutRightBig",
+                        "fadeOutUp": "fadeOutUp",
+                        "fadeOutUpBig": "fadeOutUpBig",
+                        "flipInX": "flipInX",
+                        "flipInY": "flipInY",
+                        "flipOutX": "flipOutX",
+                        "flipOutY": "flipOutY",
+                        "lightSpeedIn": "lightSpeedIn",
+                        "lightSpeedOut": "lightSpeedOut",
+                        "rotateIn": "rotateIn",
+                        "rotateInDownLeft": "rotateInDownLeft",
+                        "rotateInDownRight": "rotateInDownRight",
+                        "rotateInUpLeft": "rotateInUpLeft",
+                        "rotateInUpRight": "rotateInUpRight",
+                        "rotateOut": "rotateOut",
+                        "rotateOutDownLeft": "rotateOutDownLeft",
+                        "rotateOutDownRight": "rotateOutDownRight",
+                        "rotateOutUpLeft": "rotateOutUpLeft",
+                        "rotateOutUpRight": "rotateOutUpRight",
+                        "hinge": "hinge",
+                        "rollIn": "rollIn",
+                        "rollOut": "rollOut",
+                        "zoomIn": "zoomIn",
+                        "zoomInDown": "zoomInDown",
+                        "zoomInLeft": "zoomInLeft",
+                        "zoomInRight": "zoomInRight",
+                        "zoomInUp": "zoomInUp",
+                        "zoomOut": "zoomOut",
+                        "zoomOutDown": "zoomOutDown",
+                        "zoomOutLeft": "zoomOutLeft",
+                        "zoomOutRight": "zoomOutRight",
+                        "zoomOutUp": "zoomOutUp",
+                        "slideInDown": "slideInDown",
+                        "slideInLeft": "slideInLeft",
+                        "slideInRight": "slideInRight",
+                        "slideInUp": "slideInUp",
+                        "slideOutDown": "slideOutDown",
+                        "slideOutLeft": "slideOutLeft",
+                        "slideOutRight": "slideOutRight",
+                        "slideOutUp": "slideOutUp"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "disabled": 0,
+                    "readonly": 0
+                },
+                {
+                    "key": "field_56ec31f04811c",
+                    "label": "Extras",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-tab field_key-field_5543962ed9404 field_type-tab field_key-field_5543962ed9404 field_type-tab field_key-field_5543962ed9404",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_56ec31f04812d",
+                    "label": "Display 'Jump to...' link?",
+                    "name": "jump_link",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-true_false field_key-field_55438dd40854d field_type-true_false field_key-field_55438dd40854d field_type-true_false field_key-field_55438dd40854d",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_56ec31f04813e",
+                    "label": "Jump to ...",
+                    "name": "jump_to",
+                    "type": "text",
+                    "instructions": "Give the unique ID of the point of the page to 'Jump' to when clicked.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec31f04812d",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-text field_key-field_55438dd40855e field_type-text field_key-field_55438dd40855e field_type-text field_key-field_55438dd40855e",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_56ec31f03a294",
+            "label": "Slider Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_55438dd3eca1e field_type-tab field_key-field_55438dd3eca1e field_type-tab field_key-field_55438dd3eca1e",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56ec31f03a2a4",
+            "label": "Randomise Slide Order",
+            "name": "randomise_slide_order",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3eca2e field_type-radio field_key-field_55438dd3eca2e field_type-radio field_key-field_55438dd3eca2e",
+                "id": ""
+            },
+            "choices": {
+                "true": "Randomise slides",
+                "false": "Don't randomise slides"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "false",
+            "layout": "vertical"
+        },
+        {
+            "key": "field_56ec31f03a2b4",
+            "label": "Animation Type",
+            "name": "animation_type",
+            "type": "radio",
+            "instructions": "How would you like the transition between the slide to look?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3eca3d field_type-radio field_key-field_55438dd3eca3d field_type-radio field_key-field_55438dd3eca3d",
+                "id": ""
+            },
+            "choices": {
+                "slide": "Slide",
+                "fade": "Fade"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "slide",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a2c3",
+            "label": "Animation Direction",
+            "name": "animation_direction",
+            "type": "radio",
+            "instructions": "Set the speed of animations between slides, in milliseconds",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3eca4d field_type-radio field_key-field_55438dd3eca4d field_type-radio field_key-field_55438dd3eca4d",
+                "id": ""
+            },
+            "choices": {
+                "horizontal": "Horizontal",
+                "vertical": "Vertical"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "horizontal",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a2d3",
+            "label": "Loop Animation",
+            "name": "loop_animation",
+            "type": "radio",
+            "instructions": "Would you like the slider to loop or stop on the last slide?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3eca5d field_type-radio field_key-field_55438dd3eca5d field_type-radio field_key-field_55438dd3eca5d",
+                "id": ""
+            },
+            "choices": {
+                "true": "Loop",
+                "false": "Don't loop"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "true",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a2e3",
+            "label": "Slide Show Speed",
+            "name": "slide_show_speed",
+            "type": "number",
+            "instructions": "Set the speed of the slideshow cycling, in milliseconds",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-number field_key-field_55438dd3eca6d field_type-number field_key-field_55438dd3eca6d field_type-number field_key-field_55438dd3eca6d",
+                "id": ""
+            },
+            "default_value": 7000,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 1000,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56ec31f03a2f3",
+            "label": "Animation Speed",
+            "name": "animation_speed",
+            "type": "number",
+            "instructions": "Set the speed of animations between slides, in milliseconds",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-number field_key-field_55438dd3eca7d field_type-number field_key-field_55438dd3eca7d field_type-number field_key-field_55438dd3eca7d",
+                "id": ""
+            },
+            "default_value": 600,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": "",
+            "step": 100,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56ec31f03a302",
+            "label": "Display Direction Nav",
+            "name": "display_direction_nav",
+            "type": "radio",
+            "instructions": "Create previous\/next arrow navigation",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3eca8d field_type-radio field_key-field_55438dd3eca8d field_type-radio field_key-field_55438dd3eca8d",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "true",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a312",
+            "label": "Display Control Nav",
+            "name": "display_control_nav",
+            "type": "radio",
+            "instructions": "Create navigation for paging control of each slide",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3eca9d field_type-radio field_key-field_55438dd3eca9d field_type-radio field_key-field_55438dd3eca9d",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "true",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a321",
+            "label": "Allow Smooth Height",
+            "name": "allow_smooth_height",
+            "type": "radio",
+            "instructions": "Animate the height of the slider smoothly for slides of varying height",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3ecaad field_type-radio field_key-field_55438dd3ecaad field_type-radio field_key-field_55438dd3ecaad",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "true",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a331",
+            "label": "Allow Full Width",
+            "name": "allow_full_width",
+            "type": "radio",
+            "instructions": "Allow the slider to go full width of the page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-radio field_key-field_55438dd3ecaad field_type-radio field_key-field_55438dd3ecaad field_type-radio field_key-field_55438dd3ecaad",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "true",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec31f03a341",
+            "label": "Additional Options",
+            "name": "tab_2",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_55438dd3ecabd field_type-tab field_key-field_55438dd3ecabd field_type-tab field_key-field_55438dd3ecabd",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56ec31f03a351",
+            "label": "Additional Options",
+            "name": "additional_options",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-text field_key-field_55438dd3ecacd field_type-text field_key-field_55438dd3ecacd field_type-text field_key-field_55438dd3ecacd",
+                "id": ""
+            },
+            "field_group_id": "group_56ec37c7e20e7",
+            "min": 1,
+            "max": 1,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "ID": 1390,
+                    "key": "field_56ec37df63552",
+                    "label": "Element ID",
+                    "name": "element_id",
+                    "prefix": "",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "A unique ID (to this page) that can be used for 'jump to linking'. eg 'intro-text'",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_id",
+                    "_input": "",
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "something-unique",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "ID": 1391,
+                    "key": "field_56ec381b63553",
+                    "label": "Element Visible on ...",
+                    "name": "element_visible_on",
+                    "prefix": "",
+                    "type": "checkbox",
+                    "value": null,
+                    "menu_order": 1,
+                    "instructions": "Select what screen sizes see this element",
+                    "required": 1,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_visible_on",
+                    "_input": "",
+                    "_valid": 1,
+                    "choices": {
+                        "col-lg": "<i class=\"fa fa-desktop fa-fw\"><\/i> Large desktops, 1200px and up",
+                        "col-md": "<i class=\"fa fa-laptop fa-fw\"><\/i> Desktops, 992px and up",
+                        "col-sm": "<i class=\"fa fa-tablet fa-fw\"><\/i> Tablets, 768px and up",
+                        "col-xs": "<i class=\"fa fa-mobile fa-fw\"><\/i> Mobiles, 767px and down"
+                    },
+                    "default_value": [
+                        "col-lg",
+                        "col-md",
+                        "col-sm",
+                        "col-xs"
+                    ],
+                    "layout": "vertical",
+                    "toggle": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "attachment",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1458751843
+}

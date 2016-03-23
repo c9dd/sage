@@ -1,0 +1,471 @@
+{
+    "key": "group_54f9e5e0c460d",
+    "title": "Options",
+    "fields": [
+        {
+            "key": "field_54f9e5e0d3d18",
+            "label": "Global Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_54f9e5e0d3d18 field_type-tab field_key-field_54f9e5e0d3d18 field_type-tab field_key-field_54f9e5e0d3d18",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_54f9e5e0d3efb",
+            "label": "Global Options Message",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-message field_key-field_54f9e5e0d3efb field_type-message field_key-field_54f9e5e0d3efb field_type-message field_key-field_54f9e5e0d3efb",
+                "id": ""
+            },
+            "message": "<p>These options will control things across ALL pages & posts on your website<\/p>",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5548eaf44513e",
+            "label": "Main Telephone Number",
+            "name": "main_telephone_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-text field_key-field_5548eaf44513e field_type-text field_key-field_5548eaf44513e field_type-text field_key-field_5548eaf44513e",
+                "id": ""
+            },
+            "default_value": "0207 420 49 34",
+            "placeholder": "0207 420 49 34",
+            "prepend": "Tel",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5559b7a516e46",
+            "label": "Currency",
+            "name": "main_currency",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-select field_key-field_5559b7a516e46 field_type-select field_key-field_5559b7a516e46 field_type-select field_key-field_5559b7a516e46",
+                "id": ""
+            },
+            "choices": {
+                "&pound;": "\u00a3 Pound Sterling",
+                "&euro;": "\u20ac Euro",
+                "&curren;": "\u00a4 General currency",
+                "&yen;": "\u00a5 Yen",
+                "&cent;": "\u00a2 Cents sign",
+                "&#8355;": "\u20a3 Franc (French)",
+                "&#8352;": "\u20a0 Euro-currency sign",
+                "&#8353;": "\u20a1 Colon (Costa Rica, El Salvador)",
+                "&#8354;": "\u20a2 Cruzeiro (Brazil)",
+                "&#8356;": "\u20a4 Lira (Italy)",
+                "&#8357;": "\u20a5 Mill (US$.001)",
+                "&#8358;": "\u20a6 Naira (Nigeria)",
+                "&#8359;": "\u20a7 Peseta (Spain)",
+                "&#8360;": "\u20a8 Rupee (India)",
+                "&#8361;": "\u20a9 Won (Korea)",
+                "&#8362;": "\u20aa New sheqel (Israel)",
+                "&#8363;": "\u20ab Dong (Vietnam)",
+                "&#8365;": "\u20ad Kip (Laos)",
+                "&#8366;": "\u20ae Tugrik (Mongolia)",
+                "&#8367;": "\u20af Drachma (Greece)"
+            },
+            "default_value": {
+                "&pound;": "\u00a3 Pound Sterling"
+            },
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_54f9e5e0d41bd",
+            "label": "Brand Primary Colour",
+            "name": "brand_primary_colour",
+            "type": "color_picker",
+            "instructions": "This is the main brand colour which is used for things like links, navigation colour etc",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-color_picker field_key-field_54f9e5e0d41bd field_type-color_picker field_key-field_54f9e5e0d41bd field_type-color_picker field_key-field_54f9e5e0d41bd",
+                "id": ""
+            },
+            "default_value": "#FE952F"
+        },
+        {
+            "key": "field_552fd13c02af0",
+            "label": "Brand Secondary Colour",
+            "name": "brand_secondary_colour",
+            "type": "color_picker",
+            "instructions": "This is the secondary brand colour which is used for things like header and nav background colours",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-color_picker field_key-field_552fd13c02af0 field_type-color_picker field_key-field_552fd13c02af0 field_type-color_picker field_key-field_552fd13c02af0",
+                "id": ""
+            },
+            "default_value": "#34495E"
+        },
+        {
+            "key": "field_54f9e5e0d426c",
+            "label": "Background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-image field_key-field_54f9e5e0d426c field_type-image field_key-field_54f9e5e0d426c field_type-image field_key-field_54f9e5e0d426c",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
+        },
+        {
+            "key": "field_54f9e5e0d43e9",
+            "label": "Website Background Colour",
+            "name": "background_colour",
+            "type": "color_picker",
+            "instructions": "Pick your background colour. If you need help to pick, this <a href=\"http:\/\/flatuicolors.com\/\" target=\"_blank\">website<\/a> may help.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-color_picker field_key-field_54f9e5e0d43e9 field_type-color_picker field_key-field_54f9e5e0d43e9 field_type-color_picker field_key-field_54f9e5e0d43e9",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_560aa2f590f13",
+            "label": "Additional Code",
+            "name": "additional_code",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Code",
+            "sub_fields": [
+                {
+                    "key": "field_560aa44b90f17",
+                    "label": "Select code type",
+                    "name": "select_code_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-checkbox field_key-field_560aa44b90f17 field_type-checkbox field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17",
+                        "id": ""
+                    },
+                    "choices": {
+                        "css": "CSS",
+                        "javascript": "Javascript"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "javascript",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_560aa35590f14",
+                    "label": "Place in Header or Footer",
+                    "name": "place_in_header_or_footer",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-checkbox field_key-field_560aa35590f14 field_type-checkbox field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14",
+                        "id": ""
+                    },
+                    "choices": {
+                        "header": "Header",
+                        "footer": "Footer"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "footer",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_560aa3b090f15",
+                    "label": "Custom CSS",
+                    "name": "custom_css",
+                    "type": "textarea",
+                    "instructions": "This will add any custom CSS to ALL the templates.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_560aa44b90f17",
+                                "operator": "==",
+                                "value": "css"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-textarea field_key-field_560aa3b090f15 field_type-textarea field_key-field_560aa3b090f15 field_type-textarea field_key-field_560aa3b090f15",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54f9e5e0d4617",
+                    "label": "Custom Javascript",
+                    "name": "custom_javascript",
+                    "type": "textarea",
+                    "instructions": "This will add any custom javascript to of the ALL templates.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_560aa44b90f17",
+                                "operator": "==",
+                                "value": "javascript"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-textarea field_key-field_54f9e5e0d4617 field_type-textarea field_key-field_54f9e5e0d4617 field_type-textarea field_key-field_54f9e5e0d4617",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "jQuery.noConflict(); jQuery(document).ready(function($) {  \/\/ YOUR CODE HERE  });",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ],
+            "collapsed": ""
+        },
+        {
+            "key": "field_560bb81b71004",
+            "label": "Make Pages available off-line?",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-message field_key-field_560bb81b71004 field_type-message field_key-field_560bb81b71004 field_type-message field_key-field_560bb81b71004",
+                "id": ""
+            },
+            "message": "Your users are no longer sitting at their desktops, with a wire connecting them to the internet.\r\n\r\nThis is why modern browsers support ServiceWorkers, a new technology which lets you serve your content to your users, even when they are offline. \ud83d\udc4d",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_560bb8cb71005",
+            "label": "Activate?",
+            "name": "activate_upup",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-true_false field_key-field_560bb8cb71005 field_type-true_false field_key-field_560bb8cb71005 field_type-true_false field_key-field_560bb8cb71005 field_type-true_false field_key-field_560bb8cb71005 field_type-true_false field_key-field_560bb8cb71005",
+                "id": ""
+            },
+            "message": "IMPORTANT! In order for this to work your website MUST have an SSL certificate.",
+            "default_value": 0,
+            "show_column": 0,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0
+        },
+        {
+            "key": "field_560abb47b4390",
+            "label": "Select Pages",
+            "name": "upup_pages",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_560bb8cb71005",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390 field_type-page_link field_key-field_560abb47b4390",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1
+        },
+        {
+            "key": "field_560bbaedfb94c",
+            "label": "Assets",
+            "name": "upup_assets",
+            "type": "textarea",
+            "instructions": "Add paths to images, scripts etc you wish to make available off-line to users. \r\n<br><br>\r\nIMPORTANT: These need to be placed within single quotes ( 'like this' ) & separated with a comma ( 'first item' , 'second item' ).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_560bb8cb71005",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c field_type-textarea field_key-field_560bbaedfb94c",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "'http:\/\/yourdomain.com\/wp-content\/uploads\/logo.png', 'http:\/\/yourdomain.com\/wp-content\/uploads\/logo",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54f9e5e0d552a",
+            "label": "Page Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_54f9e5e0d552a field_type-tab field_key-field_54f9e5e0d552a field_type-tab field_key-field_54f9e5e0d552a",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_54f9e5e0d560b",
+            "label": "Post Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_54f9e5e0d560b field_type-tab field_key-field_54f9e5e0d560b field_type-tab field_key-field_54f9e5e0d560b",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_54f9e5e0d564f",
+            "label": "Show sidebar on posts",
+            "name": "show_sidebar_on_posts",
+            "type": "true_false",
+            "instructions": "This will add a sidebar to the 'single' post view as well as the 'archive' pages where posts are listed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-true_false field_key-field_54f9e5e0d564f field_type-true_false field_key-field_54f9e5e0d564f field_type-true_false field_key-field_54f9e5e0d564f",
+                "id": ""
+            },
+            "message": "Show sidebar",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "is_acf_component": 0,
+    "modified": 1458751961
+}

@@ -1,0 +1,167 @@
+{
+    "key": "group_56f01d5085617",
+    "title": "<i class=\"fa fa-minus fa-fw\"><\/i> Row Break \/ Spacer",
+    "fields": [
+        {
+            "key": "field_56f01d71236eb",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f01d9e236ee",
+            "label": "Row Break \/ Spacer Height",
+            "name": "row_break_spacer_height",
+            "type": "number_slider",
+            "instructions": "Set the height of the break",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "slider_units": "px",
+            "default_value": 30,
+            "slider_min_value": 1,
+            "slider_max_value": 2500,
+            "increment_value": 1
+        },
+        {
+            "key": "field_56f01d7c236ec",
+            "label": "Additional Options",
+            "name": "_copy",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f01d85236ed",
+            "label": "Additional Element Options",
+            "name": "additional_element_options",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_id": "group_56ec37c7e20e7",
+            "min": 1,
+            "max": 1,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "ID": 1390,
+                    "key": "field_56ec37df63552",
+                    "label": "Element ID",
+                    "name": "element_id",
+                    "prefix": "",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "A unique ID (to this page) that can be used for 'jump to linking'. eg 'intro-text'",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_id",
+                    "_input": "",
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "something-unique",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "ID": 1391,
+                    "key": "field_56ec381b63553",
+                    "label": "Element Visible on ...",
+                    "name": "element_visible_on",
+                    "prefix": "",
+                    "type": "checkbox",
+                    "value": null,
+                    "menu_order": 1,
+                    "instructions": "Select what screen sizes see this element",
+                    "required": 1,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_visible_on",
+                    "_input": "",
+                    "_valid": 1,
+                    "choices": {
+                        "col-lg": "<i class=\"fa fa-desktop fa-fw\"><\/i> Large desktops, 1200px and up",
+                        "col-md": "<i class=\"fa fa-laptop fa-fw\"><\/i> Desktops, 992px and up",
+                        "col-sm": "<i class=\"fa fa-tablet fa-fw\"><\/i> Tablets, 768px and up",
+                        "col-xs": "<i class=\"fa fa-mobile fa-fw\"><\/i> Mobiles, 767px and down"
+                    },
+                    "default_value": [
+                        "col-lg",
+                        "col-md",
+                        "col-sm",
+                        "col-xs"
+                    ],
+                    "layout": "vertical",
+                    "toggle": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1458751673
+}

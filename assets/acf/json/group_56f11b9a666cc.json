@@ -1,0 +1,429 @@
+{
+    "key": "group_56f11b9a666cc",
+    "title": "<i class=\"fa fa-square-o fa-fw\"><\/i> Tabs Area",
+    "fields": [
+        {
+            "key": "field_56f11b9a7a9a5",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f11d18104e4",
+            "label": "Tab",
+            "name": "tab",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "<i class=\"fa fa-plus-circle fa-fw\"><\/i> Add Tab",
+            "sub_fields": [
+                {
+                    "key": "field_56f11d28104e5",
+                    "label": "Tab Label",
+                    "name": "tab_label",
+                    "type": "text",
+                    "instructions": "This is the text that will appear on the tab",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 80,
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Tab Name Here",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56f11d75104e7",
+                    "label": "Selected",
+                    "name": "selected",
+                    "type": "true_false",
+                    "instructions": "Do you want this to be selected when the page loads?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 15,
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Yes",
+                    "default_value": 0
+                },
+                {
+                    "key": "field_56f11d54104e6",
+                    "label": "Tab Content",
+                    "name": "tab_content",
+                    "type": "wysiwyg",
+                    "instructions": "This is the content of the tab that is selected.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1
+                }
+            ]
+        },
+        {
+            "key": "field_56f11da7104e8",
+            "label": "Tab Options",
+            "name": "tab_options",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f11db9104e9",
+            "label": "Layout Directions",
+            "name": "layout_directions",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "tabs-top": "Top",
+                "tabs-right": "Right",
+                "tabs-bottom": "Bottom",
+                "tabs-left": "Left"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "tabs-top",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56f11def104ea",
+            "label": "Layout Styles",
+            "name": "layout_styles",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_56f11db9104e9",
+                        "operator": "==",
+                        "value": "tabs-right"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_56f11db9104e9",
+                        "operator": "==",
+                        "value": "tabs-left"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "aligned": "Aligned",
+                "justified": "Justified"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "aligned",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56f11b9a7a9c7",
+            "label": "Additional Options",
+            "name": "_copy",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f11b9a7a9d7",
+            "label": "Animate Elements?",
+            "name": "animate_elements",
+            "type": "true_false",
+            "instructions": "Animate the container of this element",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes",
+            "default_value": 0
+        },
+        {
+            "key": "field_56f11b9a7a9e6",
+            "label": "Section Animation",
+            "name": "section_animation_1",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_56f11b9a7a9d7",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "js--animations--section element_tabs",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "bounce": "bounce",
+                "flash": "flash",
+                "pulse": "pulse",
+                "rubberBand": "rubberBand",
+                "shake": "shake",
+                "swing": "swing",
+                "tada": "tada",
+                "wobble": "wobble",
+                "jello": "jello",
+                "bounceIn": "bounceIn",
+                "bounceInDown": "bounceInDown",
+                "bounceInLeft": "bounceInLeft",
+                "bounceInRight": "bounceInRight",
+                "bounceInUp": "bounceInUp",
+                "bounceOut": "bounceOut",
+                "bounceOutDown": "bounceOutDown",
+                "bounceOutLeft": "bounceOutLeft",
+                "bounceOutRight": "bounceOutRight",
+                "bounceOutUp": "bounceOutUp",
+                "fadeIn": "fadeIn",
+                "fadeInDown": "fadeInDown",
+                "fadeInDownBig": "fadeInDownBig",
+                "fadeInLeft": "fadeInLeft",
+                "fadeInLeftBig": "fadeInLeftBig",
+                "fadeInRight": "fadeInRight",
+                "fadeInRightBig": "fadeInRightBig",
+                "fadeInUp": "fadeInUp",
+                "fadeInUpBig": "fadeInUpBig",
+                "fadeOut": "fadeOut",
+                "fadeOutDown": "fadeOutDown",
+                "fadeOutDownBig": "fadeOutDownBig",
+                "fadeOutLeft": "fadeOutLeft",
+                "fadeOutLeftBig": "fadeOutLeftBig",
+                "fadeOutRight": "fadeOutRight",
+                "fadeOutRightBig": "fadeOutRightBig",
+                "fadeOutUp": "fadeOutUp",
+                "fadeOutUpBig": "fadeOutUpBig",
+                "flipInX": "flipInX",
+                "flipInY": "flipInY",
+                "flipOutX": "flipOutX",
+                "flipOutY": "flipOutY",
+                "lightSpeedIn": "lightSpeedIn",
+                "lightSpeedOut": "lightSpeedOut",
+                "rotateIn": "rotateIn",
+                "rotateInDownLeft": "rotateInDownLeft",
+                "rotateInDownRight": "rotateInDownRight",
+                "rotateInUpLeft": "rotateInUpLeft",
+                "rotateInUpRight": "rotateInUpRight",
+                "rotateOut": "rotateOut",
+                "rotateOutDownLeft": "rotateOutDownLeft",
+                "rotateOutDownRight": "rotateOutDownRight",
+                "rotateOutUpLeft": "rotateOutUpLeft",
+                "rotateOutUpRight": "rotateOutUpRight",
+                "hinge": "hinge",
+                "rollIn": "rollIn",
+                "rollOut": "rollOut",
+                "zoomIn": "zoomIn",
+                "zoomInDown": "zoomInDown",
+                "zoomInLeft": "zoomInLeft",
+                "zoomInRight": "zoomInRight",
+                "zoomInUp": "zoomInUp",
+                "zoomOut": "zoomOut",
+                "zoomOutDown": "zoomOutDown",
+                "zoomOutLeft": "zoomOutLeft",
+                "zoomOutRight": "zoomOutRight",
+                "zoomOutUp": "zoomOutUp",
+                "slideInDown": "slideInDown",
+                "slideInLeft": "slideInLeft",
+                "slideInRight": "slideInRight",
+                "slideInUp": "slideInUp",
+                "slideOutDown": "slideOutDown",
+                "slideOutLeft": "slideOutLeft",
+                "slideOutRight": "slideOutRight",
+                "slideOutUp": "slideOutUp"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 1,
+            "show_column": 1,
+            "allow_quickedit": 1,
+            "allow_bulkedit": 1,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_56f11b9a7a9f5",
+            "label": "Additional Element Options",
+            "name": "additional_element_options",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_id": "group_56ec37c7e20e7",
+            "min": 1,
+            "max": 1,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "ID": 1390,
+                    "key": "field_56ec37df63552",
+                    "label": "Element ID",
+                    "name": "element_id",
+                    "prefix": "",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "A unique ID (to this page) that can be used for 'jump to linking'. eg 'intro-text'",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_id",
+                    "_input": "",
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "something-unique",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "ID": 1391,
+                    "key": "field_56ec381b63553",
+                    "label": "Element Visible on ...",
+                    "name": "element_visible_on",
+                    "prefix": "",
+                    "type": "checkbox",
+                    "value": null,
+                    "menu_order": 1,
+                    "instructions": "Select what screen sizes see this element",
+                    "required": 1,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_visible_on",
+                    "_input": "",
+                    "_valid": 1,
+                    "choices": {
+                        "col-lg": "<i class=\"fa fa-desktop fa-fw\"><\/i> Large desktops, 1200px and up",
+                        "col-md": "<i class=\"fa fa-laptop fa-fw\"><\/i> Desktops, 992px and up",
+                        "col-sm": "<i class=\"fa fa-tablet fa-fw\"><\/i> Tablets, 768px and up",
+                        "col-xs": "<i class=\"fa fa-mobile fa-fw\"><\/i> Mobiles, 767px and down"
+                    },
+                    "default_value": [
+                        "col-lg",
+                        "col-md",
+                        "col-sm",
+                        "col-xs"
+                    ],
+                    "layout": "vertical",
+                    "toggle": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1458751797
+}

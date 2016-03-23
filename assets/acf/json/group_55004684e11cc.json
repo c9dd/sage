@@ -1,0 +1,559 @@
+{
+    "key": "group_55004684e11cc",
+    "title": "Options Footer",
+    "fields": [
+        {
+            "key": "field_5593a7856afa0",
+            "label": "Upper Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_5593a7856afa0 field_type-tab field_key-field_5593a7856afa0 field_type-tab field_key-field_5593a7856afa0",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5593a79a6afa1",
+            "label": "Middle Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_5593a79a6afa1 field_type-tab field_key-field_5593a79a6afa1 field_type-tab field_key-field_5593a79a6afa1",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5593a7ba6afa3",
+            "label": "Link Text",
+            "name": "mid_footer_link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 30,
+                "class": "field_type-text field_key-field_5593a7ba6afa3 field_type-text field_key-field_5593a7ba6afa3 field_type-text field_key-field_5593a7ba6afa3",
+                "id": ""
+            },
+            "default_value": "Find Out More",
+            "placeholder": "Find Out More",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5593b2456afa4",
+            "label": "Link location",
+            "name": "mid_footer_link_location",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 70,
+                "class": "field_type-url field_key-field_5593b2456afa4 field_type-url field_key-field_5593b2456afa4 field_type-url field_key-field_5593b2456afa4",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "http:\/\/"
+        },
+        {
+            "key": "field_5593b2876afa5",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-message field_key-field_5593b2876afa5 field_type-message field_key-field_5593b2876afa5 field_type-message field_key-field_5593b2876afa5",
+                "id": ""
+            },
+            "message": "",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_5593b2b16afa6",
+            "label": "Message",
+            "name": "mid_footer_message",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-wysiwyg field_key-field_5593b2b16afa6 field_type-wysiwyg field_key-field_5593b2b16afa6 field_type-wysiwyg field_key-field_5593b2b16afa6",
+                "id": ""
+            },
+            "default_value": "BECAUSE YOU DON\u2019T WORK WITH A COMPANY.\r\nYOU WORK WITH PEOPLE. AND SO DO WE.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0
+        },
+        {
+            "key": "field_5593a7a26afa2",
+            "label": "Lower Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-tab field_key-field_5593a7a26afa2 field_type-tab field_key-field_5593a7a26afa2 field_type-tab field_key-field_5593a7a26afa2",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_556d861ab5c19",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-message field_key-field_556d861ab5c19 field_type-message field_key-field_556d861ab5c19 field_type-message field_key-field_556d861ab5c19",
+                "id": ""
+            },
+            "message": "<h2>Upper Footer<\/h2>",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_556d863cb5c1a",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-message field_key-field_556d863cb5c1a field_type-message field_key-field_556d863cb5c1a field_type-message field_key-field_556d863cb5c1a",
+                "id": ""
+            },
+            "message": "<h2>Lower Footer<\/h2>",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_552fcde28d76e",
+            "label": "Footer Site Links",
+            "name": "footer_menu_right",
+            "type": "nav_menu",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 25,
+                "class": "field_type-nav_menu field_key-field_552fcde28d76e field_type-nav_menu field_key-field_552fcde28d76e field_type-nav_menu field_key-field_552fcde28d76e",
+                "id": ""
+            },
+            "save_format": "menu",
+            "container": "nav",
+            "allow_null": 0
+        },
+        {
+            "key": "field_556d8e20d9880",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 10,
+                "class": "field_type-message field_key-field_556d8e20d9880 field_type-message field_key-field_556d8e20d9880 field_type-message field_key-field_556d8e20d9880",
+                "id": ""
+            },
+            "message": "",
+            "esc_html": 0,
+            "new_lines": "wpautop"
+        },
+        {
+            "key": "field_55004684ee0ac",
+            "label": "Social Media Links",
+            "name": "social_media_links",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 65,
+                "class": "field_type-flexible_content field_key-field_55004684ee0ac field_type-flexible_content field_key-field_55004684ee0ac field_type-flexible_content field_key-field_55004684ee0ac",
+                "id": ""
+            },
+            "button_label": "Add Social Media Link",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "53d91871e5bb0",
+                    "name": "social-media-link-facebook",
+                    "label": "Facebook",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e1d6",
+                            "label": "Facebook Address",
+                            "name": "facebook_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e1d6 field_type-url field_key-field_550046855e1d6 field_type-url field_key-field_550046855e1d6",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.facebook.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5bfb",
+                    "name": "social-media-link-twitter",
+                    "label": "Twitter",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e579",
+                            "label": "Twitter Address",
+                            "name": "twitter_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e579 field_type-url field_key-field_550046855e579 field_type-url field_key-field_550046855e579",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.twitter.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5c25",
+                    "name": "social-media-link-google-plus",
+                    "label": "Google+",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e5b0",
+                            "label": "Google+ Address",
+                            "name": "google_plus_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e5b0 field_type-url field_key-field_550046855e5b0 field_type-url field_key-field_550046855e5b0",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.plus.google.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5c64",
+                    "name": "social-media-link-linked-in",
+                    "label": "LinkedIn",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e621",
+                            "label": "LinkedIn Address",
+                            "name": "linkedin_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e621 field_type-url field_key-field_550046855e621 field_type-url field_key-field_550046855e621",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.linkedin.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5cc7",
+                    "name": "social-media-link-pinterest",
+                    "label": "Pinterest",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e646",
+                            "label": "Pinterest Address",
+                            "name": "pinterest_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e646 field_type-url field_key-field_550046855e646 field_type-url field_key-field_550046855e646",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.pinterest.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5d22",
+                    "name": "social-media-link-youtube",
+                    "label": "YouTube",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e834",
+                            "label": "YouTube Address",
+                            "name": "youtube_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e834 field_type-url field_key-field_550046855e834 field_type-url field_key-field_550046855e834",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.youtube.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5d5d",
+                    "name": "social-media-link-vimeo",
+                    "label": "Vimeo",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855e921",
+                            "label": "Vimeo Address",
+                            "name": "vimeo_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855e921 field_type-url field_key-field_550046855e921 field_type-url field_key-field_550046855e921",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.vimeo.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5d85",
+                    "name": "social-media-link-foursquare",
+                    "label": "Foursquare",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855ea63",
+                            "label": "Foursquare Address",
+                            "name": "foursquare_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855ea63 field_type-url field_key-field_550046855ea63 field_type-url field_key-field_550046855ea63",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.foursquare.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5dab",
+                    "name": "social-media-link-rss-feed",
+                    "label": "RSS Feed",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855ea88",
+                            "label": "RSS Feed Address",
+                            "name": "rss_feed_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855ea88 field_type-url field_key-field_550046855ea88 field_type-url field_key-field_550046855ea88",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.your-website.com\/feed",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5ddf",
+                    "name": "social-media-link-flickr",
+                    "label": "Flickr",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855eab5",
+                            "label": "Flickr Address",
+                            "name": "flickr_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855eab5 field_type-url field_key-field_550046855eab5 field_type-url field_key-field_550046855eab5",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.flickr.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5e04",
+                    "name": "social-media-link-instagram",
+                    "label": "Instagram",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855eefc",
+                            "label": "Instagram Address",
+                            "name": "instagram_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855eefc field_type-url field_key-field_550046855eefc field_type-url field_key-field_550046855eefc",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.instagram.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "53d91871e5e29",
+                    "name": "social-media-link-tripadvisor",
+                    "label": "Tripadvisor",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_550046855ef85",
+                            "label": "Tripadvisor Address",
+                            "name": "tripadvisor_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-url field_key-field_550046855ef85 field_type-url field_key-field_550046855ef85 field_type-url field_key-field_550046855ef85",
+                                "id": ""
+                            },
+                            "default_value": "https:\/\/www.tripadvisor.com\/YOUR-CUSTOM-URL-HERE",
+                            "placeholder": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-footer"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "is_acf_component": 0,
+    "modified": 1458751964
+}

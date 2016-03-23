@@ -1,0 +1,520 @@
+{
+    "key": "group_56ec353a6a1d0",
+    "title": "<i class=\"fa fa-bookmark fa-fw\"><\/i> Page Contents",
+    "fields": [
+        {
+            "key": "field_56ec354a3c6c9",
+            "label": "Column One",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56ec355f3c6ca",
+            "label": "Column One 75%",
+            "name": "column_one_75",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1
+        },
+        {
+            "key": "field_56ec359a3c6cb",
+            "label": "Start with Drop Cap",
+            "name": "column_one_start_with_drop_cap",
+            "type": "radio",
+            "instructions": "Allow the paragraph to start with a <a href=\"http:\/\/en.wikipedia.org\/wiki\/Initial#Types_of_initials\" target=\"_blank\">Drop Cap<\/a>.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "false",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56ec35f03c6cc",
+            "label": "Add Margin",
+            "name": "column_one_add_margin_to_the_top",
+            "type": "number",
+            "instructions": "Add margin to the top of this column (in pixels)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56ec362b3c6cd",
+            "label": "Page Contents",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56ec363c3c6ce",
+            "label": "Column Two 25% - Page Contents",
+            "name": "column_two_25_page_contents",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "<i class=\"fa fa-plus-circle fa-fw\"><\/i> Add Link",
+            "sub_fields": [
+                {
+                    "key": "field_56ec36553c6d0",
+                    "label": "Link Text",
+                    "name": "pc_link_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec36683c6d1",
+                    "label": "Link type",
+                    "name": "pc_link_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "jump": "'Jump to' section on current page",
+                        "internal": "Link to a page on this website",
+                        "external": "Link to another website"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "jump",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_56ec36953c6d2",
+                    "label": "Section ID",
+                    "name": "pc_section_id",
+                    "type": "text",
+                    "instructions": "The 'Element ID' of the section you wish to 'jump to'. Found under 'Additional Options' of each element.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec36683c6d1",
+                                "operator": "==",
+                                "value": "jump"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56ec36c13c6d3",
+                    "label": "Internal Link",
+                    "name": "pc_internal_link",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec36683c6d1",
+                                "operator": "==",
+                                "value": "internal"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page",
+                        "post"
+                    ],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0
+                },
+                {
+                    "key": "field_56ec36ea3c6d4",
+                    "label": "External Link",
+                    "name": "pc_external_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56ec36683c6d1",
+                                "operator": "==",
+                                "value": "external"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "http:\/\/",
+                    "placeholder": "http:\/\/somewebsiteaddress.co.uk\/"
+                }
+            ]
+        },
+        {
+            "key": "field_56ec36493c6cf",
+            "label": "Add Margin",
+            "name": "column_two_add_margin_to_the_top",
+            "type": "number",
+            "instructions": "Add margin to the top of this column (in pixels)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56ec3dfcc2bed",
+            "label": "Additional Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f2c79fcdec4",
+            "label": "Animate Elements?",
+            "name": "animate_elements",
+            "type": "true_false",
+            "instructions": "Animate the container of this element",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
+            "key": "field_56ec377ab17bf",
+            "label": "Additional Options",
+            "name": "",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_id": "group_56ec37c7e20e7",
+            "min": 1,
+            "max": 1,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "ID": 1390,
+                    "key": "field_56ec37df63552",
+                    "label": "Element ID",
+                    "name": "element_id",
+                    "prefix": "",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "A unique ID (to this page) that can be used for 'jump to linking'. eg 'intro-text'",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_id",
+                    "_input": "",
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "something-unique",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "ID": 1391,
+                    "key": "field_56ec381b63553",
+                    "label": "Element Visible on ...",
+                    "name": "element_visible_on",
+                    "prefix": "",
+                    "type": "checkbox",
+                    "value": null,
+                    "menu_order": 1,
+                    "instructions": "Select what screen sizes see this element",
+                    "required": 1,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_visible_on",
+                    "_input": "",
+                    "_valid": 1,
+                    "choices": {
+                        "col-lg": "<i class=\"fa fa-desktop fa-fw\"><\/i> Large desktops, 1200px and up",
+                        "col-md": "<i class=\"fa fa-laptop fa-fw\"><\/i> Desktops, 992px and up",
+                        "col-sm": "<i class=\"fa fa-tablet fa-fw\"><\/i> Tablets, 768px and up",
+                        "col-xs": "<i class=\"fa fa-mobile fa-fw\"><\/i> Mobiles, 767px and down"
+                    },
+                    "default_value": [
+                        "col-lg",
+                        "col-md",
+                        "col-sm",
+                        "col-xs"
+                    ],
+                    "layout": "vertical",
+                    "toggle": 1
+                }
+            ]
+        },
+        {
+            "key": "field_56f2c7bdcdec5",
+            "label": "Section Animation",
+            "name": "section_animation_1",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_56ec359a3c6cb",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "js--animations--section element_pc",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "bounce": "bounce",
+                "flash": "flash",
+                "pulse": "pulse",
+                "rubberBand": "rubberBand",
+                "shake": "shake",
+                "swing": "swing",
+                "tada": "tada",
+                "wobble": "wobble",
+                "jello": "jello",
+                "bounceIn": "bounceIn",
+                "bounceInDown": "bounceInDown",
+                "bounceInLeft": "bounceInLeft",
+                "bounceInRight": "bounceInRight",
+                "bounceInUp": "bounceInUp",
+                "bounceOut": "bounceOut",
+                "bounceOutDown": "bounceOutDown",
+                "bounceOutLeft": "bounceOutLeft",
+                "bounceOutRight": "bounceOutRight",
+                "bounceOutUp": "bounceOutUp",
+                "fadeIn": "fadeIn",
+                "fadeInDown": "fadeInDown",
+                "fadeInDownBig": "fadeInDownBig",
+                "fadeInLeft": "fadeInLeft",
+                "fadeInLeftBig": "fadeInLeftBig",
+                "fadeInRight": "fadeInRight",
+                "fadeInRightBig": "fadeInRightBig",
+                "fadeInUp": "fadeInUp",
+                "fadeInUpBig": "fadeInUpBig",
+                "fadeOut": "fadeOut",
+                "fadeOutDown": "fadeOutDown",
+                "fadeOutDownBig": "fadeOutDownBig",
+                "fadeOutLeft": "fadeOutLeft",
+                "fadeOutLeftBig": "fadeOutLeftBig",
+                "fadeOutRight": "fadeOutRight",
+                "fadeOutRightBig": "fadeOutRightBig",
+                "fadeOutUp": "fadeOutUp",
+                "fadeOutUpBig": "fadeOutUpBig",
+                "flipInX": "flipInX",
+                "flipInY": "flipInY",
+                "flipOutX": "flipOutX",
+                "flipOutY": "flipOutY",
+                "lightSpeedIn": "lightSpeedIn",
+                "lightSpeedOut": "lightSpeedOut",
+                "rotateIn": "rotateIn",
+                "rotateInDownLeft": "rotateInDownLeft",
+                "rotateInDownRight": "rotateInDownRight",
+                "rotateInUpLeft": "rotateInUpLeft",
+                "rotateInUpRight": "rotateInUpRight",
+                "rotateOut": "rotateOut",
+                "rotateOutDownLeft": "rotateOutDownLeft",
+                "rotateOutDownRight": "rotateOutDownRight",
+                "rotateOutUpLeft": "rotateOutUpLeft",
+                "rotateOutUpRight": "rotateOutUpRight",
+                "hinge": "hinge",
+                "rollIn": "rollIn",
+                "rollOut": "rollOut",
+                "zoomIn": "zoomIn",
+                "zoomInDown": "zoomInDown",
+                "zoomInLeft": "zoomInLeft",
+                "zoomInRight": "zoomInRight",
+                "zoomInUp": "zoomInUp",
+                "zoomOut": "zoomOut",
+                "zoomOutDown": "zoomOutDown",
+                "zoomOutLeft": "zoomOutLeft",
+                "zoomOutRight": "zoomOutRight",
+                "zoomOutUp": "zoomOutUp",
+                "slideInDown": "slideInDown",
+                "slideInLeft": "slideInLeft",
+                "slideInRight": "slideInRight",
+                "slideInUp": "slideInUp",
+                "slideOutDown": "slideOutDown",
+                "slideOutLeft": "slideOutLeft",
+                "slideOutRight": "slideOutRight",
+                "slideOutUp": "slideOutUp"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 1,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1458751474
+}

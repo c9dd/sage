@@ -1,0 +1,74 @@
+{
+    "key": "group_56ec37c7e20e7",
+    "title": "Additional Element Options",
+    "fields": [
+        {
+            "key": "field_56ec37df63552",
+            "label": "Element ID",
+            "name": "element_id",
+            "type": "text",
+            "instructions": "A unique ID (to this page) that can be used for 'jump to linking'. eg 'intro-text'",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "something-unique",
+            "prepend": "#",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56ec381b63553",
+            "label": "Element Visible on ...",
+            "name": "element_visible_on",
+            "type": "checkbox",
+            "instructions": "Select what screen sizes see this element",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "col-lg": "<i class=\"fa fa-desktop fa-fw\"><\/i> Large desktops, 1200px and up",
+                "col-md": "<i class=\"fa fa-laptop fa-fw\"><\/i> Desktops, 992px and up",
+                "col-sm": "<i class=\"fa fa-tablet fa-fw\"><\/i> Tablets, 768px and up",
+                "col-xs": "<i class=\"fa fa-mobile fa-fw\"><\/i> Mobiles, 767px and down"
+            },
+            "default_value": [
+                "col-lg",
+                "col-md",
+                "col-sm",
+                "col-xs"
+            ],
+            "layout": "vertical",
+            "toggle": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1458751837
+}

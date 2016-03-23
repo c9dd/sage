@@ -1,0 +1,679 @@
+{
+    "key": "group_56f133c78db9d",
+    "title": "<i class=\"fa fa-newspaper-o fa-fw\"><\/i> Cards",
+    "fields": [
+        {
+            "key": "field_56f133c7a0e14",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f133c7a57e3",
+            "label": "Overview",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Cards support a wide variety of content, including images, text, list groups, links, and more. Mix and match multiple content types to create the card you need.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_56f133f1b360d",
+            "label": "Card",
+            "name": "card",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "<i class=\"fa fa-plus-circle fa-fw\"><\/i> Add Card",
+            "sub_fields": [
+                {
+                    "key": "field_56f13408b360e",
+                    "label": "Card Content",
+                    "name": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_56f1341eb360f",
+                    "label": "Card Header",
+                    "name": "card_header",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_56f134e3b3613",
+                                "operator": "==",
+                                "value": "header"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_56f1352bb3614",
+                    "label": "Card Content",
+                    "name": "card_content",
+                    "type": "flexible_content",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "button_label": "<i class=\"fa fa-plus-circle fa-fw\"><\/i>  Add Card Element",
+                    "min": "",
+                    "max": "",
+                    "layouts": [
+                        {
+                            "key": "56f13538817a1",
+                            "name": "card_content_image",
+                            "label": "Image",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56f1353cb3615",
+                                    "label": "Card Image",
+                                    "name": "card_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "preview_size": "responsive-medium",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "return_format": "array",
+                                    "library": "all"
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "56f1357cb3616",
+                            "name": "card_content_titles",
+                            "label": "Titles",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56f13594b3618",
+                                    "label": "Card Title",
+                                    "name": "card_title",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_56f1359fb3619",
+                                    "label": "Card Subtitle",
+                                    "name": "card_subtitle",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "56f135b9b361a",
+                            "name": "card_content_text_area",
+                            "label": "Text Area",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56f135cdb361d",
+                                    "label": "Card Text",
+                                    "name": "card_text_area",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        {
+                            "key": "56f135f9b361e",
+                            "name": "card_content_button",
+                            "label": "Button",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_56f135f9b361f",
+                                    "label": "Card Button",
+                                    "name": "card_button",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "http:\/\/"
+                                },
+                                {
+                                    "key": "field_56f1361cb3620",
+                                    "label": "Button Color",
+                                    "name": "card_button_color",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "primary": "Dark Blue",
+                                        "secondary": "Outline",
+                                        "success": "Green",
+                                        "warning": "Yellow",
+                                        "danger": "Red",
+                                        "link": "Link"
+                                    },
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "primary",
+                                    "layout": "horizontal"
+                                },
+                                {
+                                    "key": "field_56f13643b3621",
+                                    "label": "Card Button State",
+                                    "name": "card_button_state",
+                                    "type": "radio",
+                                    "instructions": "In need of a button, but not the hefty background colours they bring? Select Outline for something a little more subtle. ",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "outline": "Outline",
+                                        "solid": "Solid"
+                                    },
+                                    "other_choice": 0,
+                                    "save_other_choice": 0,
+                                    "default_value": "solid",
+                                    "layout": "horizontal"
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_56f13438b3610",
+            "label": "Card Options",
+            "name": "card_options",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f13446b3611",
+            "label": "Card Sizing",
+            "name": "card_sizing",
+            "type": "number_slider",
+            "instructions": "The number of columns it should span.\r\n\r\nTotal columns = 12\r\n\r\nSo to have it full width you would set it to 12",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "slider_units": "",
+            "default_value": 6,
+            "slider_min_value": 1,
+            "slider_max_value": 5,
+            "increment_value": 1
+        },
+        {
+            "key": "field_56f134b5b3612",
+            "label": "Card Text Alignment",
+            "name": "card_text_alignment",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "<i class=\"fa fa-align-left\"><\/i> Left",
+                "center": "<i class=\"fa fa-align-center\"><\/i> Center",
+                "right": "<i class=\"fa fa-align-right\"><\/i> Right"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "left",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56f134e3b3613",
+            "label": "Show Hidden",
+            "name": "show_hidden",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "header": "Header",
+                "footer": "Footer"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_56f133c7a5836",
+            "label": "Additional Options",
+            "name": "_copy",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f133c7a9457",
+            "label": "Animate Elements?",
+            "name": "animate_elements",
+            "type": "true_false",
+            "instructions": "Animate the container of this element",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes",
+            "default_value": 0
+        },
+        {
+            "key": "field_56f133c7ab0bb",
+            "label": "Section Animation",
+            "name": "section_animation_1",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_56f133c7a9457",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "js--animations--section element_card",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "bounce": "bounce",
+                "flash": "flash",
+                "pulse": "pulse",
+                "rubberBand": "rubberBand",
+                "shake": "shake",
+                "swing": "swing",
+                "tada": "tada",
+                "wobble": "wobble",
+                "jello": "jello",
+                "bounceIn": "bounceIn",
+                "bounceInDown": "bounceInDown",
+                "bounceInLeft": "bounceInLeft",
+                "bounceInRight": "bounceInRight",
+                "bounceInUp": "bounceInUp",
+                "bounceOut": "bounceOut",
+                "bounceOutDown": "bounceOutDown",
+                "bounceOutLeft": "bounceOutLeft",
+                "bounceOutRight": "bounceOutRight",
+                "bounceOutUp": "bounceOutUp",
+                "fadeIn": "fadeIn",
+                "fadeInDown": "fadeInDown",
+                "fadeInDownBig": "fadeInDownBig",
+                "fadeInLeft": "fadeInLeft",
+                "fadeInLeftBig": "fadeInLeftBig",
+                "fadeInRight": "fadeInRight",
+                "fadeInRightBig": "fadeInRightBig",
+                "fadeInUp": "fadeInUp",
+                "fadeInUpBig": "fadeInUpBig",
+                "fadeOut": "fadeOut",
+                "fadeOutDown": "fadeOutDown",
+                "fadeOutDownBig": "fadeOutDownBig",
+                "fadeOutLeft": "fadeOutLeft",
+                "fadeOutLeftBig": "fadeOutLeftBig",
+                "fadeOutRight": "fadeOutRight",
+                "fadeOutRightBig": "fadeOutRightBig",
+                "fadeOutUp": "fadeOutUp",
+                "fadeOutUpBig": "fadeOutUpBig",
+                "flipInX": "flipInX",
+                "flipInY": "flipInY",
+                "flipOutX": "flipOutX",
+                "flipOutY": "flipOutY",
+                "lightSpeedIn": "lightSpeedIn",
+                "lightSpeedOut": "lightSpeedOut",
+                "rotateIn": "rotateIn",
+                "rotateInDownLeft": "rotateInDownLeft",
+                "rotateInDownRight": "rotateInDownRight",
+                "rotateInUpLeft": "rotateInUpLeft",
+                "rotateInUpRight": "rotateInUpRight",
+                "rotateOut": "rotateOut",
+                "rotateOutDownLeft": "rotateOutDownLeft",
+                "rotateOutDownRight": "rotateOutDownRight",
+                "rotateOutUpLeft": "rotateOutUpLeft",
+                "rotateOutUpRight": "rotateOutUpRight",
+                "hinge": "hinge",
+                "rollIn": "rollIn",
+                "rollOut": "rollOut",
+                "zoomIn": "zoomIn",
+                "zoomInDown": "zoomInDown",
+                "zoomInLeft": "zoomInLeft",
+                "zoomInRight": "zoomInRight",
+                "zoomInUp": "zoomInUp",
+                "zoomOut": "zoomOut",
+                "zoomOutDown": "zoomOutDown",
+                "zoomOutLeft": "zoomOutLeft",
+                "zoomOutRight": "zoomOutRight",
+                "zoomOutUp": "zoomOutUp",
+                "slideInDown": "slideInDown",
+                "slideInLeft": "slideInLeft",
+                "slideInRight": "slideInRight",
+                "slideInUp": "slideInUp",
+                "slideOutDown": "slideOutDown",
+                "slideOutLeft": "slideOutLeft",
+                "slideOutRight": "slideOutRight",
+                "slideOutUp": "slideOutUp"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 1,
+            "show_column": 0,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_56f133c7ab1da",
+            "label": "Additional Element Options",
+            "name": "additional_element_options",
+            "type": "component_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_id": "group_56ec37c7e20e7",
+            "min": 1,
+            "max": 1,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "ID": 1390,
+                    "key": "field_56ec37df63552",
+                    "label": "Element ID",
+                    "name": "element_id",
+                    "prefix": "",
+                    "type": "text",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "A unique ID (to this page) that can be used for 'jump to linking'. eg 'intro-text'",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_id",
+                    "_input": "",
+                    "_valid": 1,
+                    "default_value": "",
+                    "placeholder": "something-unique",
+                    "prepend": "#",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "ID": 1391,
+                    "key": "field_56ec381b63553",
+                    "label": "Element Visible on ...",
+                    "name": "element_visible_on",
+                    "prefix": "",
+                    "type": "checkbox",
+                    "value": null,
+                    "menu_order": 1,
+                    "instructions": "Select what screen sizes see this element",
+                    "required": 1,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 1387,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "_name": "element_visible_on",
+                    "_input": "",
+                    "_valid": 1,
+                    "choices": {
+                        "col-lg": "<i class=\"fa fa-desktop fa-fw\"><\/i> Large desktops, 1200px and up",
+                        "col-md": "<i class=\"fa fa-laptop fa-fw\"><\/i> Desktops, 992px and up",
+                        "col-sm": "<i class=\"fa fa-tablet fa-fw\"><\/i> Tablets, 768px and up",
+                        "col-xs": "<i class=\"fa fa-mobile fa-fw\"><\/i> Mobiles, 767px and down"
+                    },
+                    "default_value": [
+                        "col-lg",
+                        "col-md",
+                        "col-sm",
+                        "col-xs"
+                    ],
+                    "layout": "vertical",
+                    "toggle": 1
+                }
+            ]
+        },
+        {
+            "key": "field_56f1368cb3622",
+            "label": "Help",
+            "name": "help",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_56f1369bb3623",
+            "label": "About Cards",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<h1>Cards<\/h1>\r\n\r\n<p>A <strong>card<\/strong> is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options.<\/p>\r\n\r\n<p>If you\u2019re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.<\/p>\r\n<p>Full details about <a href=\"http:\/\/v4-alpha.getbootstrap.com\/components\/card\/\" taget=\"_blank\">Cards can seen here<\/a>.<\/p>",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1458751688
+}
