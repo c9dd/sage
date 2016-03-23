@@ -1,5 +1,4 @@
 <?php
-require_once get_stylesheet_directory() . '/assets/imports/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', __NAMESPACE__ . '\\my_theme_register_required_plugins' );
 

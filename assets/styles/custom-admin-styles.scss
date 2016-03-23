@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Custom Admin Styles - Not editor content, but WP as a whole
+   ========================================================================== */
+   @import "common/colours";
+   @import "../vendor/animate.css-master/animate.min.scss";
+
+   @mixin font-size( $sizeValue ) {	                  // PX value passed
+		$baseSizeValue	: 0; 								              // Set default
+		$fontSize		    : ( $baseSizeValue + $sizeValue );// Calc font size as px
+		$remValue		    : ( $sizeValue / 10 );				    // Calc font sizeas as rem
+		$lineHieght		  :	$fontSize + 2;					        // Calc line height
+		font-size		    : $fontSize + px;					        // Print font size in px (fallback)
+		font-size		    :	$remValue + rem;				        // Print font size in rem
+		line-height		  : $lineHieght + px;				        // Print line height
+	}
+
+body {
+
+
+	[data-layout=testimonial] {
+		.view.show-if-value.acf-soh {
+			img {
+				border-radius: 150px;
+			}
+		}
+	}
+
+	input[type="radio"][value="blue"]{
+		background: $boot-color-info;
+	}
+
+	input[type="radio"][value="green"]{
+		background: $boot-color-success;
+	}
+
+	input[type="radio"][value="yellow"]{
+		background: $boot-color-warning;
+	}
+
+	input[type="radio"][value="red"]{
+		background: $boot-color-danger;
+	}
+
+
+	i.foldicon {
+		&:not(foldicon--expand) {
+			float: right;
+		}
+
+		&:nth-of-type(2) {
+			margin-right: 65px;
+	  	}
+	}
+
+	.acf-field {
+		overflow: hidden;
+		// For the animation examples combined with custom JS
+		.animationWrapper {
+			text-align: center;
+			span {
+				border: 1px solid $accent-color-9;
+				//color: $accent-color-9;
+				@include font-size(12);
+				line-height: 26px;
+				padding: 10px;
+				margin: 0 0 10px;
+				display: inline-block;
+				// controls the animation examples
+				animation-duration: 3s;
+				animation-delay: 2s;
+				animation-iteration-count: infinite;
+			}
+		}
+
+	}
+}

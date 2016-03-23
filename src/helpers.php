@@ -87,7 +87,6 @@ function title()
    require_once get_stylesheet_directory() . '/assets/imports/the-plugin-list.php';
 
 
-
 /* ==========================================================================
   Adds ACF Local JSON files for backup needs
   See http://goo.gl/bBk67c  &  http://goo.gl/oiNJ7g
@@ -257,20 +256,18 @@ function my_register_mce_button( $buttons ) {
 /* ==========================================================================
    Load custom scripts in to admin area
    ========================================================================== */
-/*
+
 function custom_admin_scripts($hook) {
 
 	if( $hook != 'edit.php' && $hook != 'post.php' && $hook != 'post-new.php' )
 		return;
 		// Checks to see what version (dev or production) we are using and uses that
-		wp_enqueue_script('custom_admin_scripts_wheel', 	Assets\asset_path('scripts/jquery.wheelmenu.min.js'), ['jquery'], null, false);
-		wp_enqueue_style ('custom_admin_styles_wheel', 		Assets\asset_path('styles/wheelmenu.css'));
-    wp_enqueue_script('custom_admin_scripts', 			Assets\asset_path('scripts/custom_admin_scripts.js'), ['jquery'], null, true);
-    wp_enqueue_style ('custom_admin_styles', 			Assets\asset_path('styles/custom-admin-style.css'));
+    // wp_enqueue_script('custom_admin_scripts', get_template_directory() . Asset::$dist . '/custom_admin_scripts.js', ['jquery'], null, true);  // in the 'dist' directory
+    wp_enqueue_script('custom_admin_scripts', get_template_directory_uri() . '/assets/scripts/custom-admin-scripts.js', ['jquery'], null, true);   // in the 'assets', aka 'working' directory for now
+    wp_enqueue_style ('custom_admin_styles', get_template_directory_uri() . '/assets/styles/custom-admin-styles.css');                             // in the 'assets', aka 'working' directory for now
 }
 
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\custom_admin_scripts' );
-*/
 
 
 /* ==========================================================================
@@ -296,7 +293,7 @@ if (function_exists('tevkori_filter_content_images'))
 
 if ( function_exists( 'add_image_size' ) )
 {
-	add_image_size( 'logo-image-size', 447, 160 ); // Soft Crop Mode
+	add_image_size( 'logo-image-size', 447, 160 );     // Soft Crop Mode
 	add_image_size( 'paralax-image-size', 1561, 683 ); // Soft Crop Mode
 	// add_image_size( 'holiday-type-block', 350, 226 ); // Hard Crop Mode
 }

@@ -1,11 +1,11 @@
-var webpack = require('webpack'),
-    path = require('path'),
-    autoprefixer = require('autoprefixer'),
-    Clean = require("clean-webpack-plugin"),
-    AssetsPlugin = require('assets-webpack-plugin'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+var webpack                 = require('webpack'),
+    path                    = require('path'),
+    autoprefixer            = require('autoprefixer'),
+    Clean                   = require('clean-webpack-plugin'),
+    AssetsPlugin            = require('assets-webpack-plugin'),
+    ExtractTextPlugin       = require('extract-text-webpack-plugin'),
     OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-    cssnano = require('cssnano');
+    cssnano                 = require('cssnano');
 
 var SAGE_ENV = process.env.SAGE_ENV || 'development',
     webpackConfig;
@@ -35,15 +35,19 @@ var assetsPluginProcessOutput = function (assets) {
   }
   return JSON.stringify(results);
 }
-
+// NOTE:
+// Naming below controls the name of the .js file in the 'dist' directory
 webpackConfig = {
   entry: {
-    main: [
+    main: [ // <-- main = main.js in 'dist' directory
       './assets/scripts/main'
     ],
     customizer: [
       './assets/scripts/customizer'
-    ]
+    ]/*,
+    custom-admin-scripts: [
+      './assets/scripts/custom-admin-scripts'
+    ]*/
   },
   output: {
     path: sage.dist,
@@ -117,18 +121,18 @@ if ( SAGE_ENV === 'development' ) {
   // development
   webpackConfig.entry.main.push('webpack-hot-middleware/client?reload=true');
   webpackConfig.entry.customizer.push('webpack-hot-middleware/client?reload=true');
-  webpackConfig.output.filename = '[name].js';
+  webpackConfig.output.filename          = '[name].js';
   webpackConfig.output.sourceMapFilename = '[file].map';
-  webpackConfig.output.pathinfo = true;
-  webpackConfig.debug = true;
-  webpackConfig.devtool = '#cheap-module-source-map';
+  webpackConfig.output.pathinfo          = true;
+  webpackConfig.debug                    = true;
+  webpackConfig.devtool                  = '#cheap-module-source-map';
   webpackConfig.plugins.push(new webpack.optimize.OccurenceOrderPlugin());
   webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
   webpackConfig.plugins.push(new webpack.NoErrorsPlugin());
   webpackConfig.plugins.push(new ExtractTextPlugin('[name].css', { disable: !sage.extractStyles }));
 } else {
   // production
-  webpackConfig.output.filename = '[name].[hash].js';
+  webpackConfig.output.filename          = '[name].[hash].js';
   webpackConfig.output.sourceMapFilename = '[file].[hash].map';
   webpackConfig.plugins.push(new ExtractTextPlugin('[name].[hash].css'));
   webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin());
