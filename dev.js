@@ -1,12 +1,12 @@
 /* eslint no-console: 0 */
 
-var webpack = require('webpack'),
+var webpack              = require('webpack'),
     webpackDevMiddleware = require('webpack-dev-middleware'),
     webpackHotMiddleware = require('webpack-hot-middleware'),
     browserSync          = require('browser-sync');
 
-var devBuildConfig = require('./webpack.config'),
-    compiler = webpack(devBuildConfig);
+var devBuildConfig       = require('./webpack.config'),
+    compiler             = webpack(devBuildConfig);
 
 browserSync.init({
   proxy: {

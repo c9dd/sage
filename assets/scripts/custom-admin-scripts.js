@@ -18,11 +18,19 @@ function getVideoId(videoURL){
 }
 */
 
+
 // NOTE:
 // To stop conflicts with native jQuery stuff as we will us $j instead of just $
 $j = jQuery.noConflict();
 $j(document).ready(function() {
-// alert('Hello, I'm loaded');
+
+
+  if ( $j('body').hasClass('wp-admin') )
+  {
+    //alert('Hello, I\'m loaded $j');
+  }
+
+
 	/*
 	function testAnimLink(anim, id) {
 		var aniElementID = $j('.js--animations--section').attr('class').split(' ')[4];
@@ -55,12 +63,19 @@ $j(document).ready(function() {
 		testAni(anim, aniElementID);
 	});
 */
-
+/*
 	$j('.js--animations--section input[type=hidden]').change(function() {
 		var anim 					 = $j(this).val();
 		var aniElementID 	 = $j(this).closest('.js--animations--section').attr('class').split(' ')[4];
 		testAni(anim, aniElementID);
+    alert();
 	});
+*/
+  $j('.js--animations--section input[type=hidden]').change(function() {
+    var anim 					 = $j(this).val();
+    var aniElementID 	 = $j(this).closest('.js--animations--section').attr('class').split(' ')[4];
+    testAni(anim, aniElementID);
+  });
 
 	// Slider START
 

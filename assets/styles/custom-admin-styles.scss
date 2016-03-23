@@ -2,7 +2,7 @@
    Custom Admin Styles - Not editor content, but WP as a whole
    ========================================================================== */
    @import "common/colours";
-   @import "../vendor/animate.css-master/animate.min.scss";
+   //@import "../vendor/animate.css-master/animate.min.scss";
 
    @mixin font-size( $sizeValue ) {	                  // PX value passed
 		$baseSizeValue	: 0; 								              // Set default
@@ -53,8 +53,11 @@ body {
 	}
 
 	.acf-field {
-		overflow: hidden;
-		// For the animation examples combined with custom JS
+		.animationWrapper{
+      overflow: hidden;
+    }
+		// NOTE:
+    // For the animation examples combined with custom JS
 		.animationWrapper {
 			text-align: center;
 			span {
@@ -65,7 +68,9 @@ body {
 				padding: 10px;
 				margin: 0 0 10px;
 				display: inline-block;
-				// controls the animation examples
+
+				// NOTE:
+        // Controls the animation examples
 				animation-duration: 3s;
 				animation-delay: 2s;
 				animation-iteration-count: infinite;

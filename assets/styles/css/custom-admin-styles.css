@@ -1,0 +1,12 @@
+/* ========================================================================== Custom Admin Styles - Not editor content, but WP as a whole ========================================================================== */
+/* ========================================================================== colors http://flatuicolors.com/ ========================================================================== */
+body [data-layout=testimonial] .view.show-if-value.acf-soh img { border-radius: 150px; }
+body input[type="radio"][value="blue"] { background: #5bc0de; }
+body input[type="radio"][value="green"] { background: #5cb85c; }
+body input[type="radio"][value="yellow"] { background: #f0ad4e; }
+body input[type="radio"][value="red"] { background: #d9534f; }
+body i.foldicon:not(foldicon--expand) { float: right; }
+body i.foldicon:nth-of-type(2) { margin-right: 65px; }
+body .acf-field .animationWrapper { overflow: hidden; }
+body .acf-field .animationWrapper { text-align: center; }
+body .acf-field .animationWrapper span { border: 1px solid #bdc3c7; font-size: 12px; font-size: 1.2rem; line-height: 14px; line-height: 26px; padding: 10px; margin: 0 0 10px; display: inline-block; animation-duration: 3s; animation-delay: 2s; animation-iteration-count: infinite; }

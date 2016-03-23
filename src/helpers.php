@@ -262,9 +262,10 @@ function custom_admin_scripts($hook) {
 	if( $hook != 'edit.php' && $hook != 'post.php' && $hook != 'post-new.php' )
 		return;
 		// Checks to see what version (dev or production) we are using and uses that
-    // wp_enqueue_script('custom_admin_scripts', get_template_directory() . Asset::$dist . '/custom_admin_scripts.js', ['jquery'], null, true);  // in the 'dist' directory
+    // wp_enqueue_script('custom_admin_scripts', get_template_directory() . Asset::$dist . '/custom_admin_scripts.js', ['jquery'], null, true);    // in the 'dist' directory
     wp_enqueue_script('custom_admin_scripts', get_template_directory_uri() . '/assets/scripts/custom-admin-scripts.js', ['jquery'], null, true);   // in the 'assets', aka 'working' directory for now
-    wp_enqueue_style ('custom_admin_styles', get_template_directory_uri() . '/assets/styles/custom-admin-styles.css');                             // in the 'assets', aka 'working' directory for now
+    wp_enqueue_style ('custom_admin_styles', get_template_directory_uri() . '/assets/styles/css/custom-admin-styles.css');                         // in the 'assets', aka 'working' directory for now
+    wp_enqueue_style ('animate_styles', get_template_directory_uri() . '/assets/vendor/animate.css-master/animate.min.css');                         // in the 'assets', aka 'working' directory for now
 }
 
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\custom_admin_scripts' );
