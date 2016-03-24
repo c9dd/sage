@@ -38,7 +38,7 @@
         },
         {
             "key": "field_56efed44061da",
-            "label": "Column Two 75",
+            "label": "Column Two 75%",
             "name": "column_two_75",
             "type": "wysiwyg",
             "instructions": "",
@@ -558,5 +558,5 @@
     "active": 0,
     "description": "",
     "is_acf_component": 1,
-    "modified": 1458751604
+    "modified": 1458823307
 }

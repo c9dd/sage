@@ -5,10 +5,11 @@
   $randomString = App\generateRandomString();
 
 	// Get the Timeline start date and format it as we want it
-	$startDateRaw				       = 	DateTime::createFromFormat( 'Ymd', get_sub_field( 'start_date' ) );
+  $startDateACF              =  get_sub_field( 'start_date' );
+	$startDateRaw				       = 	DateTime::createFromFormat( 'Y-m-d', $startDateACF );
 	$startDateFormatted 		   = 	$startDateRaw->format( 'd-m-Y' );	 // Complete date
 	$startDateYearFormatted 	 = 	$startDateRaw->format( 'Y' );		   // Just the year
-	//echo $startDateYearFormatted;
+	// echo $startDateYearFormatted;
 
 	// See if event auto spacing has been turned off
 	$autoEventSpacing = get_sub_field('event_auto_spacing');

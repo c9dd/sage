@@ -1,4 +1,5 @@
 import "../styles/main.scss";
+import "../vendor/animate.css-master/animate.min.css";
 
 import $ from 'jquery';
 import Router from './util/router';
@@ -33,6 +34,31 @@ var Sage = {
 		finalize: function() {
 			// NOTE:
 			// JavaScript to be fired on all pages, after page specific JS is fired
+
+			// for animating elements on scroll
+			var viewport = $(window),
+			setVisible = function () {
+					var viewportTop = viewport.scrollTop(),
+							viewportBottom = viewport.scrollTop() + viewport.height();
+					$('.animate-elements').data('element-unique-id').each(function () {
+						alert();
+						$(this).find('*[data-animate="true"]').not('.element-slider').each(function () {
+							var animationType 	= $(this).data('animation-type');
+
+							var self = $(this),
+									top = self.offset().top,
+									bottom = top + self.height(),
+									topOnScreen = top >= viewportTop && top <= viewportBottom,
+									bottomOnScreen = bottom >= viewportTop && bottom <= viewportBottom,
+									elemVisible = topOnScreen || bottomOnScreen;
+
+							self.toggleClass('animated '+animationType+'', elemVisible);
+						});
+					});
+			};
+
+			viewport.scroll(setVisible);
+			setVisible();
 
 
 			// NOTE:
@@ -100,7 +126,7 @@ var Sage = {
 						$(this).parent().addClass('lightGallery');
 				});
 
-        // NOTE:
+				// NOTE:
 				// Now do something with them
 				// $('a.lightGallery').fluidbox();
 
@@ -127,7 +153,7 @@ var Sage = {
 
 
 			// NOTE:
-      // GRAVITY FORMS
+			// GRAVITY FORMS
 			// If this ia a 'page' or a 'post' (but not the contact us page), that has a gravity form on it
 			if ( $('body').is('.page, .archive, .single-post') )
 			{

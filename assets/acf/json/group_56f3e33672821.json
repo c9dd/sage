@@ -1,9 +1,9 @@
 {
-    "key": "group_56effa1004b5f",
+    "key": "group_56f3e33672821",
     "title": "<i class=\"fa fa-columns fa-fw\"><\/i> Two Columns 75% - 25%",
     "fields": [
         {
-            "key": "field_56effa101b874",
+            "key": "field_56f3e3368699b",
             "label": "Content",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_56effa101b887",
+            "key": "field_56f3e336869f5",
             "label": "Column One 75%",
             "name": "column_one_75",
             "type": "wysiwyg",
@@ -37,8 +37,8 @@
             "media_upload": 1
         },
         {
-            "key": "field_56effa101b898",
-            "label": "Column Two 25",
+            "key": "field_56f3e33686a4f",
+            "label": "Column Two 25%",
             "name": "column_two_25",
             "type": "wysiwyg",
             "instructions": "",
@@ -55,7 +55,7 @@
             "media_upload": 1
         },
         {
-            "key": "field_56effa101b8a8",
+            "key": "field_56f3e33687470",
             "label": "Column Options",
             "name": "",
             "type": "tab",
@@ -71,7 +71,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_56effa101b8b8",
+            "key": "field_56f3e33687500",
             "label": "",
             "name": "",
             "type": "message",
@@ -79,7 +79,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 75,
+                "width": 25,
                 "class": "",
                 "id": ""
             },
@@ -88,7 +88,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_56effa101b8c8",
+            "key": "field_56f3e336886fb",
             "label": "",
             "name": "",
             "type": "message",
@@ -96,7 +96,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 25,
+                "width": 75,
                 "class": "",
                 "id": ""
             },
@@ -105,7 +105,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_56effa101b8d8",
+            "key": "field_56f3e336895cc",
             "label": "Start with Drop Cap",
             "name": "column_one_start_with_drop_cap",
             "type": "radio",
@@ -113,7 +113,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 75,
+                "width": 25,
                 "class": "field_type-radio",
                 "id": ""
             },
@@ -130,7 +130,7 @@
             "allow_bulkedit": 0
         },
         {
-            "key": "field_56effa101b8e8",
+            "key": "field_56f3e336895f0",
             "label": "Start with Drop Cap",
             "name": "column_two_start_with_drop_cap",
             "type": "radio",
@@ -138,7 +138,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 25,
+                "width": 75,
                 "class": "field_type-radio",
                 "id": ""
             },
@@ -155,28 +155,9 @@
             "allow_bulkedit": 0
         },
         {
-            "key": "field_56effa101b8f8",
+            "key": "field_56f3e33689638",
             "label": "Add Margin",
             "name": "column_one_add_margin_to_the_top",
-            "type": "number_slider",
-            "instructions": "Add margin to the top of this column (in pixels)",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 75,
-                "class": "",
-                "id": ""
-            },
-            "slider_units": "px",
-            "default_value": 0,
-            "slider_min_value": -500,
-            "slider_max_value": 500,
-            "increment_value": 1
-        },
-        {
-            "key": "field_56effa101b908",
-            "label": "Add Margin",
-            "name": "column_two_add_margin_to_the_top",
             "type": "number_slider",
             "instructions": "Add margin to the top of this column (in pixels)",
             "required": 0,
@@ -193,7 +174,26 @@
             "increment_value": 1
         },
         {
-            "key": "field_56effa101b918",
+            "key": "field_56f3e33689c79",
+            "label": "Add Margin",
+            "name": "column_two_add_margin_to_the_top",
+            "type": "number_slider",
+            "instructions": "Add margin to the top of this column (in pixels)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 75,
+                "class": "",
+                "id": ""
+            },
+            "slider_units": "px",
+            "default_value": 0,
+            "slider_min_value": -500,
+            "slider_max_value": 500,
+            "increment_value": 1
+        },
+        {
+            "key": "field_56f3e3368b113",
             "label": "Animate Elements?",
             "name": "animate_elements",
             "type": "true_false",
@@ -209,7 +209,7 @@
             "default_value": 0
         },
         {
-            "key": "field_56effa101b929",
+            "key": "field_56f3e3368c1d7",
             "label": "Section Animation",
             "name": "column_one_section_animation",
             "type": "select",
@@ -218,15 +218,15 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_56effa101b918",
+                        "field": "field_56f3e3368b113",
                         "operator": "==",
                         "value": "1"
                     }
                 ]
             ],
             "wrapper": {
-                "width": 75,
-                "class": "js--animations--section element_col2-75-25-1",
+                "width": 25,
+                "class": "js--animations--section element_col2-25-75-1",
                 "id": ""
             },
             "choices": {
@@ -321,7 +321,7 @@
             "readonly": 0
         },
         {
-            "key": "field_56effa101b939",
+            "key": "field_56f3e3368c254",
             "label": "Section Animation",
             "name": "column_two_section_animation",
             "type": "select",
@@ -330,15 +330,15 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_56effa101b918",
+                        "field": "field_56f3e3368b113",
                         "operator": "==",
                         "value": "1"
                     }
                 ]
             ],
             "wrapper": {
-                "width": 25,
-                "class": "js--animations--section element_col2-75-25-2",
+                "width": 75,
+                "class": "js--animations--section element_col2-25-75-2",
                 "id": ""
             },
             "choices": {
@@ -433,7 +433,7 @@
             "readonly": 0
         },
         {
-            "key": "field_56effa101b949",
+            "key": "field_56f3e3368c619",
             "label": "Additional Options",
             "name": "",
             "type": "tab",
@@ -449,7 +449,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_56effa101b95a",
+            "key": "field_56f3e3368c75c",
             "label": "additional_element_options",
             "name": "additional_element_options",
             "type": "component_field",
@@ -558,5 +558,5 @@
     "active": 0,
     "description": "",
     "is_acf_component": 1,
-    "modified": 1458751606
+    "modified": 1458829752
 }

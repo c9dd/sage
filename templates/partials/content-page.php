@@ -1,8 +1,7 @@
-<div class="page content col-xs-12">
-	<div class="row">
+<div class="page content row">
     <article <?php post_class('col-xs-12 '.$cssClass);?>>
       <div class="row">
-        <header>
+        <header class="col-xs-12">
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <?php get_template_part('partials/entry-meta'); ?>
         </header>
@@ -42,5 +41,4 @@
         </section>
       </div>
     </article>
-  </div>
 </div>

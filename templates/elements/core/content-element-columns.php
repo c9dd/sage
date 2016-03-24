@@ -6,8 +6,13 @@ $randomString = App\generateRandomString();
 		Layout Page Contents
 	   ========================================================================== */
 
-		if(get_row_layout() == 'page_contents'): ?>
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column page-contents <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+		if(get_row_layout() == 'page_contents')
+		{
+
+			while( have_rows('one_column') ) : the_row();
+
+		?>
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column page-contents <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_two page-contents-block col-xs-12 col-md-4 col-md-push-8 last-column" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px">
 
 				<div class="row">
@@ -70,33 +75,42 @@ $randomString = App\generateRandomString();
 
 
 	<?php
+			endwhile;
+		}
 	/* ==========================================================================
 		Layout 1 column
 	   ========================================================================== */
 
-		elseif(get_row_layout() == 'one_column'):
+		elseif(get_row_layout() == 'one_column')
+		{
+
+			while( have_rows('one_column') ) : the_row();
 
 			if ( get_sub_field ('animate_elements') ) {
 				$animateElementsClass 	 = 'animate-elements';
 				$animateElements 		     = 'data-animate="true" ';
 				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
 			}
-
 		?>
 
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="multi-column one_column row <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="multi-column one_column row <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>">
 			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-sm-12 col-md-12 col-lg-12 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one'); ?>
 			</section>
 	</div>
 
-
 		<?php
+			endwhile;
+		}
+
 		/* ==========================================================================
 			Layout 2 columns
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'two_columns'):
+		elseif(get_row_layout() == 'two_columns')
+		{
+
+			while( have_rows('two_columns') ) : the_row();
 
 			if ( get_sub_field ('animate_elements') ) {
 				$animateElementsClass 	 = 'animate-elements';
@@ -107,7 +121,7 @@ $randomString = App\generateRandomString();
 
 		?>
 
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column two_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column two_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-sm-6 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one'); ?>
 			</section>
@@ -119,11 +133,17 @@ $randomString = App\generateRandomString();
 
 
 		<?php
+			endwhile;
+		}
+
 		/* ==========================================================================
 			Layout 2 columns 25% - 75%
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'two_columns_25_75'):
+		elseif(get_row_layout() == 'two_columns_25_75')
+		{
+
+			while( have_rows('two_columns_25_75') ) : the_row();
 
 			if ( get_sub_field ('animate_elements') ) {
 				$animateElementsClass 	 = 'animate-elements';
@@ -134,49 +154,57 @@ $randomString = App\generateRandomString();
 
 		?>
 
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column two_columns_25_75 <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
-			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-4 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px"data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column two_columns_25_75 <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-4 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one_25'); ?>
 			</section>
 
-			<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-8 last-column" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px"data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
+			<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-8 last-column" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
 				<?php the_sub_field('column_two_75'); ?>
 			</section>
 	</div>
 
 
 		<?php
+			endwhile;
+		}
 		/* ==========================================================================
 			Layout 2 columns 75% - 25%
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'two_columns_75_25'):
+		elseif(get_row_layout() == 'two_columns_75_25')
+		{
 
-			if ( get_sub_field ('animate_elements') ) {
-				$animateElementsClass 	 = 'animate-elements';
-				$animateElements 		     = 'data-animate="true" ';
-				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
-			}
+			while( have_rows('two_columns_75_25') ) : the_row();
 
+				if ( get_sub_field ('animate_elements') ) {
+					$animateElementsClass 	 = 'animate-elements';
+					$animateElements 		     = 'data-animate="true" ';
+					$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+					$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				}
 		?>
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column two_columns_75_25 <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
-			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-8 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
-				<?php the_sub_field('column_one_75'); ?>
-			</section>
+		<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column two_columns_75_25 <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+				<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-8 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
+					<?php the_sub_field('column_one_25'); ?>
+				</section>
 
-			<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-4 last-column" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
-				<?php the_sub_field('column_two_25'); ?>
-			</section>
-	</div>
-
-
+				<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-4 last-column" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
+					<?php the_sub_field('column_two_75'); ?>
+				</section>
+		</div>
 		<?php
+			endwhile;
+		}
+
 		/* ==========================================================================
 			Layout 3 columns
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'three_columns'):
+		elseif(get_row_layout() == 'three_columns')
+		{
+
+			while( have_rows('three_columns') ) : the_row();
 
 			if ( get_sub_field ('animate_elements') ) {
 				$animateElementsClass 	 = 'animate-elements';
@@ -188,7 +216,7 @@ $randomString = App\generateRandomString();
 
 		?>
 
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-4 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one'); ?>
 			</section>
@@ -204,11 +232,17 @@ $randomString = App\generateRandomString();
 
 
 		<?php
+			endwhile;
+		}
+
 		/* ==========================================================================
 			Layout 3 columns 50% 25% 25%
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'three_columns_50_25_25'):
+		elseif(get_row_layout() == 'three_columns_50_25_25')
+		{
+
+			while( have_rows('three_columns_50_25_25') ) : the_row();
 
 			/*
 			$notVisibleOn = bootstapHidden();
@@ -231,7 +265,7 @@ $randomString = App\generateRandomString();
 
 		?>
 
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-6 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one'); ?>
 			</section>
@@ -245,12 +279,18 @@ $randomString = App\generateRandomString();
 			</section>
 	</div>
 
-		<?php /* } */
+		<?php
+			endwhile;
+		}
+
 		/* ==========================================================================
 			Layout 3 columns 25% 25% 50%
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'three_columns_50_25_25'):
+		elseif(get_row_layout() == 'three_columns_50_25_25')
+		{
+
+			while( have_rows('three_columns_50_25_25') ) : the_row();
 
 			if ( get_sub_field ('animate_elements') ) {
 				$animateElementsClass 	 = 'animate-elements';
@@ -262,7 +302,7 @@ $randomString = App\generateRandomString();
 
 		?>
 
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one'); ?>
 			</section>
@@ -277,44 +317,55 @@ $randomString = App\generateRandomString();
 	</div>
 
 
-	<?php
-	/* ==========================================================================
-		Layout 3 columns 25% 50% 20%
-		 ========================================================================== */
-
-	elseif(get_row_layout() == 'three_columns_25_50_25'):
-
-		if ( get_sub_field ('animate_elements') ) {
-			$animateElementsClass 	 = 'animate-elements';
-			$animateElements 		     = 'data-animate="true" ';
-			$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
-			$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
-			$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+		<?php
+			endwhile;
 		}
 
-	?>
+		/* ==========================================================================
+			Layout 3 columns 25% 50% 20%
+			 ========================================================================== */
 
-<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
-		<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
-			<?php the_sub_field('column_one'); ?>
-		</section>
+		elseif(get_row_layout() == 'three_columns_25_50_25')
+		{
+			while( have_rows('three_columns_25_50_25') ) : the_row();
 
-		<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-6" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
-			<?php the_sub_field('column_two'); ?>
-		</section>
+			if ( get_sub_field ('animate_elements') ) {
+				$animateElementsClass 	 = 'animate-elements';
+				$animateElements 		     = 'data-animate="true" ';
+				$animateElement1 		     = 'data-animation-type="'. get_sub_field("column_one_section_animation") . '"';
+				$animateElement2 		     = 'data-animation-type="'. get_sub_field("column_two_section_animation") . '"';
+				$animateElement3 		     = 'data-animation-type="'. get_sub_field("column_three_section_animation") . '"';
+			}
 
-		<section class="column_three<?php if (get_sub_field('column_three_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 last-column" style="margin-top: <?php the_sub_field('column_three_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_three_section_animation'); ?>" <?= $animateElements.$animateElement3; ?>>
-			<?php the_sub_field('column_three'); ?>
-		</section>
-</div>
+		?>
+
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column three_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
+				<?php the_sub_field('column_one'); ?>
+			</section>
+
+			<section class="column_two<?php if (get_sub_field('column_two_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-6" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_two_section_animation'); ?>" <?= $animateElements.$animateElement2; ?>>
+				<?php the_sub_field('column_two'); ?>
+			</section>
+
+			<section class="column_three<?php if (get_sub_field('column_three_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 last-column" style="margin-top: <?php the_sub_field('column_three_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_three_section_animation'); ?>" <?= $animateElements.$animateElement3; ?>>
+				<?php the_sub_field('column_three'); ?>
+			</section>
+	</div>
 
 
 		<?php
+			endwhile;
+		}
+
 		/* ==========================================================================
 			Layout 4 columns
 		   ========================================================================== */
 
-		elseif(get_row_layout() == 'four_columns'):
+		elseif(get_row_layout() == 'four_columns')
+		{
+
+			while( have_rows('four_columns') ) : the_row();
 
 			if ( get_sub_field ('animate_elements') ) {
 				$animateElementsClass 	 = 'animate-elements';
@@ -326,7 +377,7 @@ $randomString = App\generateRandomString();
 			}
 
 		?>
-	<div <?php if (get_sub_field('element_id') !== '') : ?>id="<?php the_sub_field('element_id');?>" <?php endif;?> class="row multi-column four_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
+	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column four_columns <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_one<?php if (get_sub_field('column_one_start_with_drop_cap') == 'true') { echo ' dropcap'; } ?> col-xs-12 col-md-3 first-column" style="margin-top: <?php the_sub_field('column_one_add_margin_to_the_top'); ?>px" data-animation-type="<?php the_sub_field('column_one_section_animation'); ?>" <?= $animateElements.$animateElement1; ?>>
 				<?php the_sub_field('column_one'); ?>
 			</section>
@@ -344,4 +395,6 @@ $randomString = App\generateRandomString();
 			</section>
 	</div>
 
-	<?php endif; ?>
+	<?php
+			endwhile;
+		}; ?>

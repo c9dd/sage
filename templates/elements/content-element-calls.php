@@ -4,10 +4,13 @@
 ?>
 <!-- CORE ELEMENT CALLS -->
 
-
+<?php while (have_rows('layout_elements')): the_row(); ?>
 		<?php
 		// If we need to display any of these fields...
 		$layout_elements = array( 'page_contents', 'one_column', 'two_columns', 'two_columns_25_75', 'two_columns_75_25', 'three_columns', 'three_columns_50_25_25', 'three_columns_25_25_50', 'four_columns' );
+
+		//	$layout = get_row_layout();
+		//	print_r( $layout );
 
 		if( in_array( get_row_layout(), $layout_elements ) ) :
 
@@ -703,3 +706,6 @@
 
 
 <?php endif; ?>
+
+
+<?php endwhile; ?>
