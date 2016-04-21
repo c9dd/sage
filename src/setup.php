@@ -6,13 +6,12 @@ use Roots\Sage\Template;
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_style('sage/main.css', asset_path('main.css'), false, null);
-    wp_enqueue_script('sage/main.js', asset_path('main.js'), ['jquery'], null, false);
-
     // Custom scripts
     // wp_enqueue_script('sage/smoothscroll.js', asset_path('jquery.smooth-scroll.min.js'), ['jquery'], null, true);
     // wp_enqueue_script('sage/skrollr.js', asset_path('skrollr.min.js'), ['jquery'], null, true);
 
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }, 100);
 
 /**

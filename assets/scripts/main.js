@@ -1,6 +1,7 @@
 import "../styles/main.scss";
 import "../vendor/animate.css-master/animate.min.css";
 
+
 import $ from 'jquery';
 import Router from './util/router';
 
@@ -18,6 +19,7 @@ import "bootstrap/dist/js/umd/tab.js";
 import "bootstrap/dist/js/umd/tooltip.js";
 import "bootstrap/dist/js/umd/popover.js";
 
+<<<<<<< HEAD
 
 // NOTE:
 // Use this variable to set up the common and page specific functions. If you
