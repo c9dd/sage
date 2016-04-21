@@ -84,8 +84,6 @@ var addHotMiddleware = function (entry) {
   return results;
 }
 
-// NOTE:
-// Naming below controls the name of the .js file in the 'dist' directory
 webpackConfig = {
   context: path.resolve(config.context),
   entry: config.entry,

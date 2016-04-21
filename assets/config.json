@@ -11,8 +11,8 @@
   },
   "output": {
     "path": "dist",
-    "publicPath": "/app/themes/sage/dist/"
+    "publicPath": "/app/themes/Starter-Website/dist/"
   },
-  "devUrl": "http://example.dev",
+  "devUrl": "http://localhost/Starter-Website/",
   "devPort": 3000
 }

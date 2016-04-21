@@ -18,7 +18,7 @@ Notes:
 
                     3. composer install                 // You may need to install composer first
 
-                    4. setup dev.js                     // The dev url must be specified here for 'watch' to work
+                    4. setup watch.js                   // The dev url must be specified here for 'watch' to work
 
                     5. npm run build                    // Builds all the assets
 
