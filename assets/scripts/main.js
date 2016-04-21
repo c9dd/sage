@@ -1,25 +1,23 @@
 import "../styles/main.scss";
 import "../vendor/animate.css-master/animate.min.css";
 
-
 import $ from 'jquery';
 import Router from './util/router';
 
 // NOTE:
 // Import Bootstrap
-import "bootstrap/dist/js/umd/util.js";
-import "bootstrap/dist/js/umd/alert.js";
-import "bootstrap/dist/js/umd/button.js";
-import "bootstrap/dist/js/umd/carousel.js";
-import "bootstrap/dist/js/umd/collapse.js";
-import "bootstrap/dist/js/umd/dropdown.js";
-import "bootstrap/dist/js/umd/modal.js";
-import "bootstrap/dist/js/umd/scrollspy.js";
-import "bootstrap/dist/js/umd/tab.js";
-import "bootstrap/dist/js/umd/tooltip.js";
-import "bootstrap/dist/js/umd/popover.js";
+import 'bootstrap/dist/js/umd/util.js';
+import 'bootstrap/dist/js/umd/alert.js';
+import 'bootstrap/dist/js/umd/button.js';
+import 'bootstrap/dist/js/umd/carousel.js';
+import 'bootstrap/dist/js/umd/collapse.js';
+import 'bootstrap/dist/js/umd/dropdown.js';
+import 'bootstrap/dist/js/umd/modal.js';
+import 'bootstrap/dist/js/umd/scrollspy.js';
+import 'bootstrap/dist/js/umd/tab.js';
+import 'bootstrap/dist/js/umd/tooltip.js';
+import 'bootstrap/dist/js/umd/popover.js';
 
-<<<<<<< HEAD
 
 // NOTE:
 // Use this variable to set up the common and page specific functions. If you
