@@ -42,7 +42,7 @@ body {
 								content: '';
 								width: 22px;
 								height: 22px;
-								background: linear-gradient(left top, $accent-color-11 0%, $accent-color-11 100%);
+								background: linear-gradient(to left to bottom, $accent-color-11 0%, $accent-color-11 100%);
 								transform: rotate(45deg);
 								display: block;
 								right: 0;
@@ -60,7 +60,7 @@ body {
 									content: '';
 									width: 24px;
 									height: 30px;
-									background: linear-gradient(left top, $accent-color-11 0%, $accent-color-11 100%);
+									background: linear-gradient(to left to bottom, $accent-color-11 0%, $accent-color-11 100%);
 									display: block;
 									right: -14px;
 									top: 0;
