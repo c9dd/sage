@@ -11,7 +11,7 @@
   },
   "output": {
     "path": "dist",
-    "publicPath": "/app/themes/Starter-Website/dist/"
+    "publicPath": "/Starter-Website/wp-content/themes/cloud9-starter-2016/dist/"
   },
   "devUrl": "http://localhost/Starter-Website/",
   "devPort": 3000

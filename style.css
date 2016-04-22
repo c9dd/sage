@@ -18,7 +18,9 @@ Notes:
 
                     3. composer install                 // You may need to install composer first
 
-                    4. setup watch.js                   // The dev url must be specified here for 'watch' to work
+                    4. setup assets/config.json         // The dev url must be specified for build & production to work
+                                                        // and the public path needs to point at the right location like this for 'watch' to work ...
+                                                        // "publicPath": "/SITE NAME ON LOCALHOST/wp-content/themes/THEME NAME/dist/"
 
                     5. npm run build                    // Builds all the assets
 
