@@ -11,7 +11,7 @@ use Roots\Sage\Template;
      // wp_enqueue_script('sage/skrollr.js', asset_path('skrollr.min.js'), ['jquery'], null, true);
 
      wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
-     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, false);
  }, 100);
 
 
