@@ -22,11 +22,11 @@ Notes:
                                                         // and the public path needs to point at the right location like this for 'watch' to work ...
                                                         // "publicPath": "/SITE NAME ON LOCALHOST/wp-content/themes/THEME NAME/dist/"
 
-                    5. npm run build                    // Builds all the assets
+                    5a. npm run watch                    // Runs the browser sync ( for development, doesn't 'build' anything in a dist directory)
 
-                    6. npm run watch                    // Runs the browser sync
+                    5b. npm run build                    // Builds all the assets in a dist directory
 
-                    7. npm run build:production         // Build minimized assets for production use
+                    5c. npm run build:production         // Build minimized assets for production use in a dist directory with hashing
 
 
 
