@@ -264,7 +264,7 @@ function custom_admin_scripts($hook) {
     // wp_enqueue_script('custom_admin_scripts', get_template_directory() . Asset::$dist . '/custom_admin_scripts.js', ['jquery'], null, true);    // in the 'dist' directory
     wp_enqueue_script('custom_admin_scripts', get_template_directory_uri() . '/assets/scripts/custom-admin-scripts.js', ['jquery'], null, true);   // in the 'assets', aka 'working' directory for now
     wp_enqueue_style ('custom_admin_styles', get_template_directory_uri() . '/assets/styles/css/custom-admin-styles.css');                         // in the 'assets', aka 'working' directory for now
-    wp_enqueue_style ('animate_styles', get_template_directory_uri() . '/assets/vendor/animate.css-master/animate.min.css');                         // in the 'assets', aka 'working' directory for now
+    wp_enqueue_style ('animate_styles', get_template_directory_uri() . '/assets/vendor/animate.css-master/animate.min.css');                       // in the 'assets', aka 'working' directory for now
 }
 
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\custom_admin_scripts' );
@@ -711,10 +711,11 @@ $deviceType = deviceType();
 
 
 /* ==========================================================================
-   Show/Hide elements
+   Show/Hide elements ( Built to work with ACF )
    ========================================================================== */
-
+// Build an array
 function bootstapHidden() {
+
   // NOTE:
 	// Create empty array to store in to
 	$notVisibleOn = array();
@@ -754,7 +755,10 @@ function bootstapHidden() {
 	return $notVisibleOn;
 }
 
-function echoBootstrapHidden() {
+// The results from the search and split
+// This was called 'echoBootstrapHidden', but the 'advanced-custom-fields-component_field' plugin
+// needed an extra function so I renamed this. See below for more details.
+function bootstrapHiddenResults() {
 
 	$notVisibleOn = bootstapHidden();
 
@@ -762,10 +766,18 @@ function echoBootstrapHidden() {
 	// seporate them out ready to use
 	foreach ($notVisibleOn as $hiddenOn)
   {
-    $hiddenOn = $hiddenOn.' ';
+    $hiddenOn = ' ' . $hiddenOn .' ';
     echo $hiddenOn;
 	}
 
+}
+
+// Called the above & then wrap in while to work with 'advanced-custom-fields-component_field' plugin
+// and renamed above so I had to only rename this one thing and not all of the other element files.
+function echoBootstrapHidden() {
+  while( have_rows('additional_element_options') ) : the_row();
+    bootstrapHiddenResults();
+  endwhile;
 }
 
 function show_sitemap() {
