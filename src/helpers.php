@@ -79,6 +79,7 @@ function title()
 
    ============================================================================================================================================================================================ */
 
+
 /* ==========================================================================
    TGM Plugin Activation - Required or recommend plugins for the theme
    ========================================================================== */
@@ -121,6 +122,24 @@ function generateRandomString($length = 10) {
 }
 
 
+/* ==========================================================================
+   Load in the version of jQuery I want to the front-end only
+   ========================================================================== */
+if ( !is_admin() )
+{
+  add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\my_jquery_enqueue', 11 );
+
+  function my_jquery_enqueue() {
+    // Remove the default version
+    wp_deregister_script('jquery');
+
+    // This is my version ( from Google )
+    wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js", false, null);
+
+    // Now add it to the page
+    wp_enqueue_script('jquery');
+  }
+}
 
 
 
