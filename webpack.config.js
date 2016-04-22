@@ -1,22 +1,22 @@
 // External dependencies
-var webpack = require('webpack'),
-    path = require('path'),
-    argv = require('minimist')(process.argv.slice(2)),
-    qs = require('qs'),
-    autoprefixer = require('autoprefixer'),
-    Clean = require("clean-webpack-plugin"),
-    AssetsPlugin = require('assets-webpack-plugin'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+var webpack                 = require('webpack'),
+    path                    = require('path'),
+    argv                    = require('minimist')(process.argv.slice(2)),
+    qs                      = require('qs'),
+    autoprefixer            = require('autoprefixer'),
+    Clean                   = require('clean-webpack-plugin'),
+    AssetsPlugin            = require('assets-webpack-plugin'),
+    ExtractTextPlugin       = require('extract-text-webpack-plugin'),
     OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-    cssnano = require('cssnano');
+    cssnano                 = require('cssnano');
 
 // Internal dependencies
-var config = require('./assets/config');
+var config                  = require('./assets/config');
 
 // Internal variables
-var scriptsFilename = (argv.release) ? 'scripts/[name]_[hash].js' : 'scripts/[name].js',
-    stylesFilename = (argv.release) ? 'styles/[name]_[hash].css' : 'styles/[name].css',
-    sourceMapQueryStr = (argv.release) ? '-sourceMap' : '+sourceMap',
+var scriptsFilename         = (argv.release) ? 'scripts/[name]_[hash].js' : 'scripts/[name].js',
+    stylesFilename          = (argv.release) ? 'styles/[name]_[hash].css' : 'styles/[name].css',
+    sourceMapQueryStr       = (argv.release) ? '-sourceMap' : '+sourceMap',
     jsLoader,
     webpackConfig;
 

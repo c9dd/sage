@@ -1,20 +1,20 @@
 // External dependencies
-var webpack = require('webpack'),
-    webpackDevMiddleware = require('webpack-dev-middleware'),
-    webpackHotMiddleware = require('webpack-hot-middleware'),
-    browserSync = require('browser-sync');
+var webpack                     = require('webpack'),
+    webpackDevMiddleware        = require('webpack-dev-middleware'),
+    webpackHotMiddleware        = require('webpack-hot-middleware'),
+    browserSync                 = require('browser-sync');
 
 // Internal dependencies
-var webpackConfig = require('./webpack.config'),
-    config = require('./assets/config');
+var webpackConfig               = require('./webpack.config'),
+    config                      = require('./assets/config');
 
 // Internal variables
-var host = 'http://localhost',
-    port = config.devPort || '3000',
+var host                        = 'http://localhost',
+    port                        = config.devPort || '3000',
     compiler;
 
 webpackConfig.output.publicPath = host + ':' + port + config.output.publicPath;
-compiler = webpack(webpackConfig);
+compiler                        = webpack(webpackConfig);
 
 browserSync.init({
   port: port,

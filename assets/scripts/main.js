@@ -1,5 +1,5 @@
-import "../styles/main.scss";
-import "../vendor/animate.css-master/animate.min.css";
+//import "../styles/main.scss";
+//import "../vendor/animate.css-master/animate.min.css";
 
 import $ from 'jquery';
 import Router from './util/router';
@@ -378,5 +378,5 @@ var Sage = {
 // Load Events
 $(document).ready(function () {
 	new Router(Sage).loadEvents();
-	$('body').addClass('yep');
+	// $('body').addClass('yep');
 });

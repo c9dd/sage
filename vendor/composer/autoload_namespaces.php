@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'PHPMD\\' => array($vendorDir . '/phpmd/phpmd/src/main/php'),
-    'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src'),
 );
