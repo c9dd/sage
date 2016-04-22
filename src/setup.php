@@ -24,7 +24,9 @@ add_action('after_setup_theme', function () {
      * @link https://roots.io/plugins/soil/
      */
     add_theme_support('soil-clean-up');
-    add_theme_support('soil-jquery-cdn');
+    // Commented out for now as Google are not hosting 1.12.3 yet and causes it to fail, this now uses WordPress's own 1.12.3 version - https://goo.gl/DXEmnK
+    // HOWEVER, I have told it to load in version 2.2.2 as we don't need to worry about those old browsers. See helpers.php
+    // add_theme_support('soil-jquery-cdn');
     add_theme_support('soil-nav-walker');
     add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
