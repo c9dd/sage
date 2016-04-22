@@ -1,5 +1,5 @@
 //import "../styles/main.scss";
-//import "../vendor/animate.css-master/animate.min.css";
+import "../vendor/animate.css-master/animate.min.css";
 
 import $ from 'jquery';
 import Router from './util/router';
@@ -30,27 +30,24 @@ var Sage = {
 		init: function() {
 			// NOTE:
 			// JavaScript to be fired on all pages
-		},
-		finalize: function() {
-			// NOTE:
-			// JavaScript to be fired on all pages, after page specific JS is fired
+
 
 			// for animating elements on scroll
 			var viewport = $(window),
-			setVisible = function () {
-					var viewportTop = viewport.scrollTop(),
-							viewportBottom = viewport.scrollTop() + viewport.height();
-					$('.animate-elements').data('element-unique-id').each(function () {
-						alert();
+			setVisible   = function () {
+					var viewportTop    			= viewport.scrollTop(),
+							viewportBottom 			= viewport.scrollTop() + viewport.height();
+
+					$('.animate-elements').each(function () {
 						$(this).find('*[data-animate="true"]').not('.element-slider').each(function () {
 							var animationType 	= $(this).data('animation-type');
 
 							var self = $(this),
-									top = self.offset().top,
-									bottom = top + self.height(),
-									topOnScreen = top >= viewportTop && top <= viewportBottom,
-									bottomOnScreen = bottom >= viewportTop && bottom <= viewportBottom,
-									elemVisible = topOnScreen || bottomOnScreen;
+									top 						= self.offset().top,
+									bottom 					= top + self.height(),
+									topOnScreen 		= top >= viewportTop && top <= viewportBottom,
+									bottomOnScreen 	= bottom >= viewportTop && bottom <= viewportBottom,
+									elemVisible 		= topOnScreen || bottomOnScreen;
 
 							self.toggleClass('animated '+animationType+'', elemVisible);
 						});
@@ -60,6 +57,11 @@ var Sage = {
 			viewport.scroll(setVisible);
 			setVisible();
 
+
+		},
+		finalize: function() {
+			// NOTE:
+			// JavaScript to be fired on all pages, after page specific JS is fired
 
 			// NOTE:
 			// Hide the nav when we scroll down the page, but bring it back when we scroll up
@@ -378,5 +380,5 @@ var Sage = {
 // Load Events
 $(document).ready(function () {
 	new Router(Sage).loadEvents();
-	// $('body').addClass('yep');
+	$('body').addClass('yep');
 });
