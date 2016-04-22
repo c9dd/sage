@@ -31,7 +31,7 @@
 		<?php endif; ?>
 
 				<div class="col-xs-12">
-					<?php get_template_part('templates/elements/core/content', 'element-columns');  ?>
+					<?php get_template_part('templates/elements/core/element', 'columns');  ?>
 				</div>
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -67,7 +67,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-code-area'); ?>
+					<?php get_template_part('templates/elements/core/element', 'code-area'); ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -106,7 +106,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-heading-area');  ?>
+					<?php get_template_part('templates/elements/core/element', 'heading-area');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -143,7 +143,7 @@
 		<?php endif; ?>
 
 
-			<?php get_template_part('templates/elements/core/content', 'element-column-break');  ?>
+			<?php get_template_part('templates/elements/core/element', 'column-break');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -180,7 +180,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-google-map-v2');  ?>
+					<?php get_template_part('templates/elements/core/element', 'google-map-v2');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -217,7 +217,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-alerts');  ?>
+					<?php get_template_part('templates/elements/core/element', 'alerts');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -254,7 +254,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-cards');  ?>
+					<?php get_template_part('templates/elements/core/element', 'cards');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -290,7 +290,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-tabs');  ?>
+					<?php get_template_part('templates/elements/core/element', 'tabs');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -327,7 +327,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-testimonial');  ?>
+					<?php get_template_part('templates/elements/core/element', 'testimonial');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -363,7 +363,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-accordion');  ?>
+					<?php get_template_part('templates/elements/core/element', 'accordion');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -400,7 +400,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-jumbotron');  ?>
+					<?php get_template_part('templates/elements/core/element', 'jumbotron');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -437,7 +437,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-instagramfeed');  ?>
+					<?php get_template_part('templates/elements/core/element', 'instagramfeed');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -474,7 +474,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-pinterestfeed');  ?>
+					<?php get_template_part('templates/elements/core/element', 'pinterestfeed');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -511,7 +511,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-table');  ?>
+					<?php get_template_part('templates/elements/core/element', 'table');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -535,7 +535,7 @@
 		elseif(get_row_layout() == 'slider_area'):
 		?>
 		<div class="element-slider" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-slider');  ?>
+		<?php get_template_part('templates/elements/core/element', 'slider');  ?>
 		</div><!-- /.col-xs-12 -->
 
 <!---->
@@ -547,7 +547,7 @@
 		?>
 
 		<div class="col-xs-12 element-tripadvisor-block element-contents" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-tripadvisor-block');  ?>
+		<?php get_template_part('templates/elements/core/element', 'tripadvisor-block');  ?>
 		</div><!-- /.col-xs-12 -->
 
 
@@ -561,7 +561,7 @@
 		?>
 
 		<div class="col-xs-12 element-contents element-video" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-video');  ?>
+		<?php get_template_part('templates/elements/core/element', 'video');  ?>
 		</div><!-- /.col-xs-12 -->
 
 
@@ -574,7 +574,7 @@
 		?>
 
 		<div class="col-xs-12 element-contents element-fullscreen-area" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-fullscreen-area');  ?>
+		<?php get_template_part('templates/elements/core/element', 'fullscreen-area');  ?>
 		</div><!-- /.col-xs-12 -->
 
 
@@ -587,7 +587,7 @@
 		?>
 
 		<div class="col-xs-12 element-contents element-showcase-area" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-showcase-area');  ?>
+		<?php get_template_part('templates/elements/core/element', 'showcase-area');  ?>
 		</div><!-- /.col-xs-12 -->
 
 
@@ -599,7 +599,7 @@
 		// Layout for paralax message area
 		elseif(get_row_layout() == 'parallax_message_area'): ?>
 		<div class="col-xs-12 element-contents element-parallax" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-parallax');  ?>
+		<?php get_template_part('templates/elements/core/element', 'parallax');  ?>
 		</div><!-- /.col-xs-12 -->
 
 
@@ -623,7 +623,7 @@
 		?>
 
 		<div class="col-xs-12 forcontent element-contents element-paypal-form-blocks" role="document">
-		<?php get_template_part('templates/elements/core/content', 'element-paypal-form');  ?>
+		<?php get_template_part('templates/elements/core/element', 'paypal-form');  ?>
 		</div><!-- /.col-xs-12 -->
 
 
@@ -648,7 +648,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-latest-posts');  ?>
+					<?php get_template_part('templates/elements/core/element', 'latest-posts');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
@@ -685,7 +685,7 @@
 		<?php endif; ?>
 
 
-					<?php get_template_part('templates/elements/core/content', 'element-timeline');  ?>
+					<?php get_template_part('templates/elements/core/element', 'timeline');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
