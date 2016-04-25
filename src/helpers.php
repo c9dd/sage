@@ -229,7 +229,7 @@ function is_blog() {
 	global  $post;
 	$posttype = get_post_type($post);
 
-	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
+	return ( ( (is_archive() ) || ( is_author() ) || ( is_category() ) || ( is_home() ) || ( is_single() ) || ( is_tag() ) ) && ( $posttype == 'post' )  ) ? true : false ;
 }
 
 
@@ -253,7 +253,7 @@ function my_add_mce_button() {
 		add_filter( 'mce_buttons', __NAMESPACE__ . '\\my_register_mce_button' );
 	}
 }
-add_action('admin_head', __NAMESPACE__ . '\\my_add_mce_button');
+add_action( 'admin_head', __NAMESPACE__ . '\\my_add_mce_button' );
 
 // NOTE:
 // Declare script for new button
@@ -281,9 +281,9 @@ function custom_admin_scripts($hook) {
 		return;
 		// Checks to see what version (dev or production) we are using and uses that
     // wp_enqueue_script('custom_admin_scripts', get_template_directory() . Asset::$dist . '/custom_admin_scripts.js', ['jquery'], null, true);    // in the 'dist' directory
-    wp_enqueue_script('custom_admin_scripts', get_template_directory_uri() . '/assets/scripts/custom-admin-scripts.js', ['jquery'], null, true);   // in the 'assets', aka 'working' directory for now
-    wp_enqueue_style ('custom_admin_styles', get_template_directory_uri() . '/assets/styles/css/custom-admin-styles.css');                         // in the 'assets', aka 'working' directory for now
-    wp_enqueue_style ('animate_styles', get_template_directory_uri() . '/assets/vendor/animate.css-master/animate.min.css');                       // in the 'assets', aka 'working' directory for now
+    wp_enqueue_script( 'custom_admin_scripts', get_template_directory_uri() . '/assets/scripts/custom-admin-scripts.js', ['jquery'], null, true );   // in the 'assets', aka 'working' directory for now
+    wp_enqueue_style ( 'custom_admin_styles', get_template_directory_uri() . '/assets/styles/css/custom-admin-styles.css' );                         // in the 'assets', aka 'working' directory for now
+    wp_enqueue_style ( 'animate_styles', get_template_directory_uri() . '/assets/vendor/animate.css-master/animate.min.css' );                       // in the 'assets', aka 'working' directory for now
 }
 
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\custom_admin_scripts' );

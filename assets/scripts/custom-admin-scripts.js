@@ -28,7 +28,6 @@ $j(document).ready(function() {
   if ( $j('body').hasClass('wp-admin') )
   {
     //alert('Hello, I\'m loaded $j');
-  }
 
 
 	/*
@@ -237,6 +236,6 @@ function testAnimLink(anim, id) {
 
 	});
 */
-
+  }
 
 });

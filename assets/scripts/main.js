@@ -18,6 +18,9 @@ import 'bootstrap/dist/js/umd/tab.js';
 import 'bootstrap/dist/js/umd/tooltip.js';
 import 'bootstrap/dist/js/umd/popover.js';
 
+import "../styles/custom-admin-styles.scss";
+
+
 
 // NOTE:
 // Use this variable to set up the common and page specific functions. If you
@@ -30,7 +33,6 @@ var Sage = {
 		init: function() {
 			// NOTE:
 			// JavaScript to be fired on all pages
-
 
 			// for animating elements on scroll
 			var viewport = $(window),
