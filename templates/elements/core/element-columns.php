@@ -1,27 +1,34 @@
 <?php
-$randomString = App\generateRandomString();
+	$randomString = App\generateRandomString();
 
 
 	/* ==========================================================================
 		Layout Page Contents
 	   ========================================================================== */
 
-		if(get_row_layout() == 'page_contents')
+		if( get_row_layout() == 'page_contents' )
 		{
 
-			while( have_rows('one_column') ) : the_row();
+			while( have_rows('page_contents') ) : the_row();
 
 		?>
+
 	<div <?php if (get_sub_field('element_id') !== '') { ?>id="<?php the_sub_field('element_id');?>" <?php } ?> class="row multi-column page-contents <?= $animateElementsClass; App\echoBootstrapHidden(); ?>" data-element-unique-id="<?= $randomString; ?>" >
 			<section class="column_two page-contents-block col-xs-12 col-md-4 col-md-push-8 last-column" style="margin-top: <?php the_sub_field('column_two_add_margin_to_the_top'); ?>px">
 
 				<div class="row">
+					<?php
+					if ( !empty( get_field('contents_title') ) )
+					{
+					?>
 					<div class="col-xs-12">
 						<h3 class="block-title">
-						<?php _e('On this page'); ?>
+							<?php the_field('contents_title'); ?>
 						</h3>
 					</div>
-
+					<?php
+					}
+					?>
 					<div class="col-xs-12">
 						<ul>
 						<?php

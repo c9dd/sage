@@ -126,12 +126,12 @@
 
 
 		<?php
-		// Layout for column break
-		elseif(get_row_layout() == 'column_break'):
+		// Layout for row break
+		elseif(get_row_layout() == 'row_break'):
 		?>
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>
-		<div class="col-xs-12 forcontent element-contents element-column-break" role="document">
+		<div class="col-xs-12 forcontent element-contents element-row-break" role="document">
 			<div class="content row">
 
 		<?php
@@ -143,7 +143,7 @@
 		<?php endif; ?>
 
 
-			<?php get_template_part('templates/elements/core/element', 'column-break');  ?>
+			<?php get_template_part('templates/elements/core/element', 'row-break');  ?>
 
 
 		<?php if(is_page() || is_single() && !Setup\display_sidebar() ) : ?>

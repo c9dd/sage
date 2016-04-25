@@ -9,84 +9,54 @@ body {
 		&.page-contents {
 
 			.first-column {
-				p { font-weight: 600; }
+				p {}
 
-				&.dropcap p:first-of-type:first-letter {
-					font-weight: 400;
-				}
+				&.dropcap p:first-of-type:first-letter {}
 
 			}
 
 			.page-contents-block {
 
-				background: $accent-color-14;
+				background  : $accent-color-16;
+				padding-top : 10px;
+
+				.block-title {
+					text-align : center;
+				}
 
 				ul {
-					list-style: none;
-					padding: 0;
+					list-style : none;
+					padding    : 0;
 
 					li {
-						position: relative;
-						text-align: center;
+						position   : relative;
+						text-align : center;
 
 						a {
-							position: relative;
-							width: 100%;
-							color: $accent-color-7;
-							display: block;
+							position : relative;
+							width    : 100%;
+							color    : $accent-color-10;
+							display  : block;
+							@include font-size(18);
+							line-height: 26px;
 						}
 
 						&:hover {
-							&:after {
-								position: absolute;
-								content: '';
-								width: 22px;
-								height: 22px;
-								background: linear-gradient(to left to bottom, $accent-color-11 0%, $accent-color-11 100%);
-								transform: rotate(45deg);
-								display: block;
-								right: 0;
-								top: 4px;
-							}
-
 							a {
-								background: none;
-								outline: none;
-								color: $accent-color-11;
-								font-weight: 600;
-
-								&:after {
-									position: absolute;
-									content: '';
-									width: 24px;
-									height: 30px;
-									background: linear-gradient(to left to bottom, $accent-color-11 0%, $accent-color-11 100%);
-									display: block;
-									right: -14px;
-									top: 0;
-								}
-
+								background      : $accent-color-10;
+								outline         : none;
+								color           : $accent-color-8;
+								font-weight     : 600;
+								text-decoration : none;
 							}
 						}
-
 					}
-
-				}
-				.pc-booking-link {
-					width: 100%;
-					@include font-size(16);
-					font-weight: 600;
-					line-height: 40px;
 				}
 
 				margin-bottom: 30px;
-
 			}
-
 		}
-
 	}
-
 }
 
 
