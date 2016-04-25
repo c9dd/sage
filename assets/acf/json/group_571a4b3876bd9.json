@@ -1,0 +1,171 @@
+{
+    "key": "group_571a4b3876bd9",
+    "title": "Custom Code",
+    "fields": [
+        {
+            "key": "field_571a4b388ac09",
+            "label": "",
+            "name": "custom_code",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "row",
+            "button_label": "Add Code",
+            "sub_fields": [
+                {
+                    "key": "field_571a4b38b4630",
+                    "label": "Select code type",
+                    "name": "select_code_type",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-checkbox field_key-field_560aa44b90f17 field_type-checkbox field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17",
+                        "id": ""
+                    },
+                    "choices": {
+                        "css": "CSS",
+                        "javascript": "Javascript"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "javascript",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_571a4b38b464a",
+                    "label": "Place in Header or Footer",
+                    "name": "place_in_header_or_footer",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_571a4b38b4630",
+                                "operator": "==",
+                                "value": "javascript"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-checkbox field_key-field_560aa35590f14 field_type-checkbox field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14",
+                        "id": ""
+                    },
+                    "choices": {
+                        "header": "Header",
+                        "footer": "Footer"
+                    },
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "footer",
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_571a4b38b4663",
+                    "label": "Custom CSS",
+                    "name": "custom_css",
+                    "type": "textarea",
+                    "instructions": "<pre>&lt;style&gt;<\/pre> tags will be added for you",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_571a4b38b4630",
+                                "operator": "==",
+                                "value": "css"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-textarea field_key-field_560aa3b090f15 field_type-textarea field_key-field_560aa3b090f15 field_type-textarea field_key-field_560aa3b090f15",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ".your-css-class { color: red; }",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_571a4b38b467f",
+                    "label": "Custom Javascript",
+                    "name": "custom_javascript",
+                    "type": "textarea",
+                    "instructions": "<pre>&lt;script&gt;<\/pre> tags will be added for you",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_571a4b38b4630",
+                                "operator": "==",
+                                "value": "javascript"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-textarea field_key-field_54f9e5e0d4617 field_type-textarea field_key-field_54f9e5e0d4617 field_type-textarea field_key-field_54f9e5e0d4617",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "jQuery.noConflict(); jQuery(document).ready(function($) {  \/\/ YOUR CODE HERE  });",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-general-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 0,
+    "description": "",
+    "is_acf_component": 1,
+    "modified": 1461580284
+}

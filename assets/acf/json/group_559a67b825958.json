@@ -3760,7 +3760,7 @@
                                 {
                                     "ID": 1443,
                                     "key": "field_56efed44061da",
-                                    "label": "Column Two 75",
+                                    "label": "Column Two 75%",
                                     "name": "column_two_75",
                                     "prefix": "",
                                     "type": "wysiwyg",
@@ -4479,7 +4479,7 @@
                                 {
                                     "ID": 1443,
                                     "key": "field_56efed44061da",
-                                    "label": "Column Two 75",
+                                    "label": "Column Two 75%",
                                     "name": "column_two_75",
                                     "prefix": "",
                                     "type": "wysiwyg",
@@ -21901,6 +21901,217 @@
             "placeholder": "",
             "disabled": 0,
             "readonly": 0
+        },
+        {
+            "key": "field_571a4ed0a9673",
+            "label": "Additional Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_571a4ee3a9674",
+            "label": "Custom Code",
+            "name": "custom_code",
+            "type": "component_field",
+            "instructions": "This allows you to add custom CSS or JavaScript to this page only.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_group_id": "group_571a4b3876bd9",
+            "min": 1,
+            "max": 1,
+            "layout": "block",
+            "button_label": "Add Row",
+            "collapsed": "",
+            "sub_fields": [
+                {
+                    "ID": 2021,
+                    "key": "field_571a4b388ac09",
+                    "label": "",
+                    "name": "custom_code",
+                    "prefix": "",
+                    "type": "repeater",
+                    "value": null,
+                    "menu_order": 0,
+                    "instructions": "",
+                    "required": 0,
+                    "id": "",
+                    "class": "",
+                    "conditional_logic": 0,
+                    "parent": 2012,
+                    "wrapper": {
+                        "width": "",
+                        "class": "field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13 field_type-repeater field_key-field_560aa2f590f13",
+                        "id": ""
+                    },
+                    "_name": "custom_code",
+                    "_input": "",
+                    "_valid": 1,
+                    "collapsed": "",
+                    "min": "",
+                    "max": "",
+                    "layout": "row",
+                    "button_label": "Add Code",
+                    "sub_fields": [
+                        {
+                            "ID": 2022,
+                            "key": "field_571a4b38b4630",
+                            "label": "Select code type",
+                            "name": "select_code_type",
+                            "prefix": "",
+                            "type": "radio",
+                            "value": null,
+                            "menu_order": 0,
+                            "instructions": "",
+                            "required": 1,
+                            "id": "",
+                            "class": "",
+                            "conditional_logic": 0,
+                            "parent": 2021,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-checkbox field_key-field_560aa44b90f17 field_type-checkbox field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17 field_type-radio field_key-field_560aa44b90f17",
+                                "id": ""
+                            },
+                            "_name": "select_code_type",
+                            "_input": "",
+                            "_valid": 1,
+                            "choices": {
+                                "css": "CSS",
+                                "javascript": "Javascript"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "javascript",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "ID": 2023,
+                            "key": "field_571a4b38b464a",
+                            "label": "Place in Header or Footer",
+                            "name": "place_in_header_or_footer",
+                            "prefix": "",
+                            "type": "radio",
+                            "value": null,
+                            "menu_order": 1,
+                            "instructions": "",
+                            "required": 1,
+                            "id": "",
+                            "class": "",
+                            "conditional_logic": 0,
+                            "parent": 2021,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-checkbox field_key-field_560aa35590f14 field_type-checkbox field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14 field_type-radio field_key-field_560aa35590f14",
+                                "id": ""
+                            },
+                            "_name": "place_in_header_or_footer",
+                            "_input": "",
+                            "_valid": 1,
+                            "choices": {
+                                "header": "Header",
+                                "footer": "Footer"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "footer",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "ID": 2024,
+                            "key": "field_571a4b38b4663",
+                            "label": "Custom CSS",
+                            "name": "custom_css",
+                            "prefix": "",
+                            "type": "textarea",
+                            "value": null,
+                            "menu_order": 2,
+                            "instructions": "",
+                            "required": 0,
+                            "id": "",
+                            "class": "",
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_571a4b38b4630",
+                                        "operator": "==",
+                                        "value": "css"
+                                    }
+                                ]
+                            ],
+                            "parent": 2021,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-textarea field_key-field_560aa3b090f15 field_type-textarea field_key-field_560aa3b090f15 field_type-textarea field_key-field_560aa3b090f15",
+                                "id": ""
+                            },
+                            "_name": "custom_css",
+                            "_input": "",
+                            "_valid": 1,
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "ID": 2025,
+                            "key": "field_571a4b38b467f",
+                            "label": "Custom Javascript",
+                            "name": "custom_javascript",
+                            "prefix": "",
+                            "type": "textarea",
+                            "value": null,
+                            "menu_order": 3,
+                            "instructions": "",
+                            "required": 0,
+                            "id": "",
+                            "class": "",
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_571a4b38b4630",
+                                        "operator": "==",
+                                        "value": "javascript"
+                                    }
+                                ]
+                            ],
+                            "parent": 2021,
+                            "wrapper": {
+                                "width": "",
+                                "class": "field_type-textarea field_key-field_54f9e5e0d4617 field_type-textarea field_key-field_54f9e5e0d4617 field_type-textarea field_key-field_54f9e5e0d4617",
+                                "id": ""
+                            },
+                            "_name": "custom_javascript",
+                            "_input": "",
+                            "_valid": 1,
+                            "default_value": "",
+                            "placeholder": "jQuery.noConflict(); jQuery(document).ready(function($) {  \/\/ YOUR CODE HERE  });",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "location": [
@@ -21928,5 +22139,5 @@
     "active": 0,
     "description": "",
     "is_acf_component": 1,
-    "modified": 1458751847
+    "modified": 1461342089
 }
