@@ -13,29 +13,29 @@
 					</button>
 
 					<div class="web-title-area">
-						<a href="<?= esc_url(home_url('/')); ?>" class="logo">
+						<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
 						<?php
 							// NOTE:
               // Get values from the ACF options page
-							$image 		= get_field('master_logo', 'option');
+							$image 		= get_field( 'master_logo', 'option' );
 
               // NOTE:
               // Now get the image vars
-  						if( !empty($image) )
+  						if( !empty( $image ) )
               {
   							// Vars if needed
-  							$url 		= $image['url'];
-  							$title 		= $image['title'];
-  							$alt 		= $image['alt'];
-  							$caption 	= $image['caption'];
+  							$url 		   = $image['url'];
+  							$title 		 = $image['title'];
+  							$alt 		   = $image['alt'];
+  							$caption 	 = $image['caption'];
 						?>
-							<img class="website-logo hidden-xs" src="<?php echo($image['sizes']['logo-image-size']); ?>" alt="<?php bloginfo('name'); ?>" />
-							<img class="website-logo-mobile visible-xs-block" src="<?php echo($image['sizes']['logo-image-size']); ?>" alt="<?php bloginfo('name'); ?>" />
+							<img class="website-logo hidden-xs" src="<?php echo( $image['sizes']['logo-image-size'] ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
+							<img class="website-logo-mobile visible-xs-block" src="<?php echo( $image['sizes']['logo-image-size'] ); ?>" alt="<?php bloginfo( 'name' ); ?>" />
 						<?php
               }
             ?>
 						</a>
-						<a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+						<a class="navbar-brand" href="<?= esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 					</div>
 				</div>
 	  		</div>
@@ -50,9 +50,9 @@
 					       wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav col-xs-12']);
 					    }
 							*/
-							if (has_nav_menu('primary_navigation'))
+							if (has_nav_menu( 'primary_navigation') )
               {
-					       wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav col-xs-12']);
+					       wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav col-xs-12'] );
 					    }
 					  ?>
 					</nav>

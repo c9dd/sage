@@ -1,14 +1,14 @@
 <div class="page content col-xs-12">
 	<div class="row">
-    <article <?php post_class('col-xs-12 '.$cssClass);?>>
+    <article <?php post_class( 'col-xs-12 '.$cssClass );?>>
       <div class="row">
         <header>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-          <?php get_template_part('partials/entry-meta'); ?>
+          <?php get_template_part( 'partials/page-header' ); ?>
+          <?php get_template_part( 'partials/entry-meta' ); ?>
         </header>
         <?php
         // Find the editor type we are using here
-        $editorType = get_field('select_content_editor');
+        $editorType = get_field( 'select_content_editor' );
 
         // If we have no 'traditional' WordPress content, we are using ACF
         if ( $editorType == 'flexi' && !get_the_content() )
@@ -35,10 +35,10 @@
         }
         ?>
         <footer>
-          <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
+          <?php wp_link_pages( ['before' => '<nav class="page-nav"><p>' . __( 'Pages:', 'sage' ), 'after' => '</p></nav>'] ); ?>
         </footer>
         <section class="element-comments comments col-xs-12" role="document">
-          <?php comments_template('/templates/partials/comments.php'); ?>
+          <?php comments_template( '/templates/partials/comments.php' ); ?>
         </section>
       </div>
     </article>
