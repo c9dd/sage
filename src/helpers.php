@@ -799,6 +799,13 @@ function echoBootstrapHidden() {
   endwhile;
 }
 
+
+
+
+/* =================================================================================
+    ? I'm not sure. I added this at some point, now I can't remember what it does ??
+   ================================================================================= */
+
 function show_sitemap() {
   if( isset( $_GET['show_sitemap'] ) )
   {
@@ -814,3 +821,207 @@ function show_sitemap() {
   }
 }
 add_action('template_redirect', __NAMESPACE__ . '\\show_sitemap');
+
+
+
+/* ==============================================================================
+   Get file extension ( Used on attachment pages ) List from http://goo.gl/ane2wM
+   ============================================================================== */
+
+function get_icon_for_attachment($post_id) {
+  // NOTE:
+  // Start all with .
+  $base = '';
+
+  // NOTE:
+  // Pass post id
+  $type = get_post_mime_type($post_id);
+  switch ($type) {
+    case 'image/jpeg':
+    case 'image/jpg':
+    case 'image/pjpeg';
+      return $base . '<i class="fa fa-file-image-o" aria-hidden="true"></i>'; break;
+
+    case 'image/png':
+      return $base . '<i class="fa fa-file-image-o" aria-hidden="true"></i>'; break;
+
+    case 'image/gif':
+      return $base . '<i class="fa fa-file-image-o" aria-hidden="true"></i>'; break;
+
+    case 'application/postscript':
+      return $base . '<i class="fa fa-object-group" aria-hidden="true"></i>'; break;
+
+    case 'application/octet-stream':
+      return $base . '<i class="fa fa-file-image-o" aria-hidden="true"></i>'; break;
+
+    case 'application/postscript';
+      return $base . '<i class="fa fa-object-group" aria-hidden="true"></i>'; break;
+
+    case 'application/acad':
+    case 'image/vnd.dwg':
+    case 'image/x-dwg':
+      return $base . '<i class="fa fa-cube" aria-hidden="true"></i>'; break;
+
+    case 'video/mpeg':
+      return $base . '<i class="fa fa-file-video-o" aria-hidden="true"></i>'; break;
+
+    case 'audio/mpeg';
+      return $base . '<i class="fa fa-file-audio-o" aria-hidden="true"></i>'; break;
+
+    case 'application/pdf':
+      return $base . '<i class="fa fa-file-pdf-o" aria-hidden="true"></i>'; break;
+
+    case 'video/mp4':
+      return $base . '<i class="fa fa-file-video-o" aria-hidden="true"></i>'; break;
+
+    case 'application/x-troff-msvideo':
+    case 'video/msvideo':
+    case 'video/x-msvideo':
+    case 'video/avi':
+      return $base . '<i class="fa fa-file-video-o" aria-hidden="true"></i>'; break;
+
+    case 'application/x-dvi':
+      return $base . '<i class="fa fa-file-video-o" aria-hidden="true"></i>'; break;
+
+    case 'video/mov':
+      return $base . '<i class="fa fa-file-video-o" aria-hidden="true"></i>'; break;
+
+    case 'application/msword':
+      return $base . '<i class="fa fa-file-word-o" aria-hidden="true"></i>'; break;
+
+    case 'application/excel':
+    case 'application/x-excel':
+    case 'application/vnd.ms-excel':
+    case 'application/x-msexcel':
+      return $base . '<i class="fa fa-file-excel-o" aria-hidden="true"></i>'; break;
+
+    case 'application/powerpoint':
+    case 'application/mspowerpoint':
+    case 'application/vnd.ms-powerpoint':
+    case 'application/x-mspowerpoint':
+      return $base . '<i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>'; break;
+
+    case 'application/plain':
+    case 'text/csv':
+      return $base . '<i class="fa fa-file-excel-o" aria-hidden="true"></i>'; break;
+
+    case 'text/plain':
+      return $base . '<i class="fa fa-file-text" aria-hidden="true"></i>'; break;
+
+    case 'application/xml':
+    case 'text/xml':
+      return $base . '<i class="fa fa-file-code-o" aria-hidden="true"></i>'; break;
+
+    case 'application/x-gzip':
+    case 'multipart/x-gzip':
+      return $base . '<i class="fa fa-file-archive-o" aria-hidden="true"></i>'; break;
+
+    case 'application/zip':
+    case 'multipart/x-zip':
+      return $base . '<i class="fa fa-file-archive-o" aria-hidden="true"></i>'; break;
+
+    // NOTE:
+    // None of the above? Then return ...
+    default:
+      return $base . '<i class="fa fa-file" aria-hidden="true"></i>';
+  }
+}
+
+function get_file_type_for_attachment($post_id) {
+  // NOTE:
+  // Start all with .
+  $base = '.';
+
+  // NOTE:
+  // Pass post id
+  $type = get_post_mime_type($post_id);
+  switch ($type) {
+    case 'image/jpeg':
+    case 'image/jpg':
+    case 'image/pjpeg';
+      return $base . 'jpg'; break;
+
+    case 'image/png':
+      return $base . 'png'; break;
+
+    case 'image/gif':
+      return $base . 'gif'; break;
+
+    case 'application/postscript':
+      return $base . 'eps'; break;
+
+    case 'application/octet-stream':
+      return $base . 'psd'; break;
+
+    case 'application/postscript';
+      return $base . 'ai'; break;
+
+    case 'application/acad':
+    case 'image/vnd.dwg':
+    case 'image/x-dwg':
+      return $base . 'dwg'; break;
+
+    case 'video/mpeg':
+      return $base . 'mpg'; break;
+
+    case 'audio/mpeg';
+      return $base . 'mpg'; break;
+
+    case 'application/pdf':
+      return $base . 'pdf'; break;
+
+    case 'video/mp4':
+      return $base . 'mp4'; break;
+
+    case 'application/x-troff-msvideo':
+    case 'video/msvideo':
+    case 'video/x-msvideo':
+    case 'video/avi':
+      return $base . 'avi'; break;
+
+    case 'application/x-dvi':
+      return $base . 'dvi'; break;
+
+    case 'video/mov':
+      return $base . 'mov'; break;
+
+    case 'application/msword':
+      return $base . 'doc'; break;
+
+    case 'application/excel':
+    case 'application/x-excel':
+    case 'application/vnd.ms-excel':
+    case 'application/x-msexcel':
+      return $base . 'xls'; break;
+
+    case 'application/powerpoint':
+    case 'application/mspowerpoint':
+    case 'application/vnd.ms-powerpoint':
+    case 'application/x-mspowerpoint':
+      return $base . 'ppt'; break;
+
+    case 'application/plain':
+    case 'text/csv':
+      return $base . 'csv'; break;
+
+    case 'text/plain':
+      return $base . 'txt'; break;
+
+    case 'application/xml':
+    case 'text/xml':
+      return $base . 'xml'; break;
+
+    case 'application/x-gzip':
+    case 'multipart/x-gzip':
+      return $base . 'gzip'; break;
+
+    case 'application/zip':
+    case 'multipart/x-zip':
+      return $base . 'zip'; break;
+
+    // NOTE:
+    // None of the above? Then return ...
+    default:
+      return $base . 'unknown file format';
+  }
+}

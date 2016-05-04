@@ -13,6 +13,7 @@ add_filter('sage/display_sidebar', function ($display) {
         is_404(),
         is_front_page(),
         is_page(),
+        is_attachment(),
         is_page_template('templates/template-custom.php'),
     ]) : $display;
 });

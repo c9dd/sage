@@ -282,7 +282,15 @@
                             "required": 1,
                             "id": "",
                             "class": "",
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_571a4b38b4630",
+                                        "operator": "==",
+                                        "value": "javascript"
+                                    }
+                                ]
+                            ],
                             "parent": 2021,
                             "wrapper": {
                                 "width": "",
@@ -310,7 +318,7 @@
                             "type": "textarea",
                             "value": null,
                             "menu_order": 2,
-                            "instructions": "",
+                            "instructions": "<pre>&lt;style&gt;<\/pre> tags will be added for you",
                             "required": 0,
                             "id": "",
                             "class": "",
@@ -333,7 +341,7 @@
                             "_input": "",
                             "_valid": 1,
                             "default_value": "",
-                            "placeholder": "",
+                            "placeholder": ".your-css-class { color: red; }",
                             "maxlength": "",
                             "rows": "",
                             "new_lines": "",
@@ -349,7 +357,7 @@
                             "type": "textarea",
                             "value": null,
                             "menu_order": 3,
-                            "instructions": "",
+                            "instructions": "<pre>&lt;script&gt;<\/pre> tags will be added for you",
                             "required": 0,
                             "id": "",
                             "class": "",
@@ -491,6 +499,39 @@
             "endpoint": 0
         },
         {
+            "key": "field_5729b93fc51ff",
+            "label": "Attachment Pages",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5729b96fc5200",
+            "label": "Allow Comments",
+            "name": "options_pages_allow_comments",
+            "type": "true_false",
+            "instructions": "Allow commenting on attachment pages?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Yes",
+            "default_value": 1
+        },
+        {
             "key": "field_54f9e5e0d560b",
             "label": "Post Options",
             "name": "",
@@ -556,5 +597,5 @@
     "active": 1,
     "description": "",
     "is_acf_component": 0,
-    "modified": 1461341507
+    "modified": 1462352342
 }
