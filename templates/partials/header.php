@@ -1,15 +1,12 @@
 <?php // use Roots\Sage\Nav\NavWalker; ?>
-<header class="banner navbar navbar-default navbar-fixed-top" role="banner">
+<header class="banner navbar navbar-dark bg-inverse navbar-fixed-top" role="banner">
 
 	<div class="container">
 		<div class="row">
 	  		<div class="col-xs-3">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only"><?= _e('Toggle navigation', 'trident2015'); ?></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+					<button type="button" class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target=".navbar-collapse">
+						&#9776;
 					</button>
 
 					<div class="web-title-area">
@@ -43,16 +40,31 @@
 	  		<div class="col-xs-9">
 
 				<div class="container-container">
-					<nav class="collapse navbar-collapse row" role="navigation">
+					<nav class="collapse navbar-toggleable-xs" role="navigation">
 					  <?php
 							/*
 							if (has_nav_menu('primary_navigation')) {
-					       wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav col-xs-12']);
+					      wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new NavWalker(), 'menu_class' => 'nav navbar-nav col-xs-12']);
 					    }
 							*/
-							if (has_nav_menu( 'primary_navigation') )
+							if ( has_nav_menu( 'primary_navigation') )
               {
-					       wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav col-xs-12'] );
+
+								wp_nav_menu(
+									array(
+						        'menu'              => 'primary_navigation',
+						        'theme_location'    => 'primary_navigation',
+						        'depth'             => 2,
+						        'container'         => 'div',
+						        'container_class'   => 'collapse navbar-toggleable-xs',
+										'container_id'      => 'bs-example-navbar-collapse-1',
+						        'menu_class'        => 'nav navbar-nav col-xs-12',
+						        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						        'walker'            => new wp_bootstrap_navwalker()
+									)
+						    );
+
+					    //  wp_nav_menu( ['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav col-xs-12'] );
 					    }
 					  ?>
 					</nav>
