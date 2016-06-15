@@ -40,7 +40,7 @@
             "name": "mid_footer_link_text",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": 30,
@@ -52,6 +52,9 @@
             "prepend": "",
             "append": "",
             "maxlength": "",
+            "show_column": 0,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0,
             "readonly": 0,
             "disabled": 0
         },
@@ -61,7 +64,7 @@
             "name": "mid_footer_link_location",
             "type": "url",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": 70,
@@ -69,7 +72,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "http:\/\/"
+            "placeholder": "http:\/\/",
+            "show_column": 0,
+            "allow_quickedit": 0,
+            "allow_bulkedit": 0
         },
         {
             "key": "field_5593b2876afa5",
@@ -85,8 +91,8 @@
                 "id": ""
             },
             "message": "",
-            "esc_html": 0,
-            "new_lines": "wpautop"
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
             "key": "field_5593b2b16afa6",
@@ -94,14 +100,14 @@
             "name": "mid_footer_message",
             "type": "wysiwyg",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "field_type-wysiwyg field_key-field_5593b2b16afa6 field_type-wysiwyg field_key-field_5593b2b16afa6 field_type-wysiwyg field_key-field_5593b2b16afa6",
                 "id": ""
             },
-            "default_value": "BECAUSE YOU DON\u2019T WORK WITH A COMPANY.\r\nYOU WORK WITH PEOPLE. AND SO DO WE.",
+            "default_value": "",
             "tabs": "all",
             "toolbar": "full",
             "media_upload": 0
@@ -555,5 +561,5 @@
     "active": 1,
     "description": "",
     "is_acf_component": 0,
-    "modified": 1458751964
+    "modified": 1465991975
 }

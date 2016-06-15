@@ -4,7 +4,7 @@
 html,
 body {
 
-	.table-area,
+	.element-table-area,
 	.element-price-table-area {
 		margin-bottom: 15px;
 		main {
@@ -29,6 +29,16 @@ body {
 				margin: -20px 0 0;
 			}
 
+		}
+
+		.table-reflow {
+			tbody {
+				display: flex;
+
+				tr {
+					flex-grow: 1;
+				}
+			}
 		}
 	}
 
