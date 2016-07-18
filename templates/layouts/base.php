@@ -50,12 +50,12 @@
             <?php 	endif; ?>
           "
           <?php endif; ?>>
-            <?php include App\template_unwrap(); ?>
+            <?php include App\template()->main(); ?>
           </div>
         </main><!-- /.main -->
         <?php if (App\display_sidebar()) : ?>
           <aside class="sidebar">
-            <?php get_template_part('partials/sidebar'); ?>
+            <?php App\template_part('partials/sidebar'); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
       </div><!-- /.content -->
